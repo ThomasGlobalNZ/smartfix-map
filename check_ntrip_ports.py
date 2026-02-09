@@ -94,16 +94,28 @@ def main():
     
     print(f"Connecting to {HOST}...")
     
+    # 0. Load Existing Meta (to preserve last_seen)
+    existing_meta = {}
+    if os.path.exists("app/data/station_meta.json"):
+        try:
+            with open("app/data/station_meta.json", "r") as f:
+                existing_meta = json.load(f)
+        except Exception as e:
+            print(f"Warning: Could not load existing meta: {e}")
+
     # 1. Fetch Active Streams
     active_streams = set()
+    total_streams_found = 0
 
     for port in PORTS:
-        print(f"Checking Port {port}...")
+        print(f"Checking Port {port}...", end="", flush=True)
         data = get_sourcetable(HOST, port, USER, PASSWORD)
         
         if data:
             mountpoints = parse_sourcetable(data)
-            print(f"  Found {len(mountpoints)} streams.")
+            count = len(mountpoints)
+            print(f" Found {count} streams.")
+            total_streams_found += count
             
             for mp in mountpoints:
                 # Basic parsing
@@ -123,8 +135,18 @@ def main():
                     if station_code not in mapping:
                         mapping[station_code] = {'ports': []}
                     mapping[station_code]['ports'].append(port)
+        else:
+            print(" No data/Connection failed.")
         
         time.sleep(1)
+
+    # FAIL-SAFE: If we found 0 streams total, something is wrong with network/auth.
+    # Do NOT overwrite the file with empty data.
+    if total_streams_found == 0:
+        print("\nCRITICAL ERROR: No streams found on any port!")
+        print("Possible causes: Network down, detailed auth failure, or caster maintenance.")
+        print("ABORTING UPDATE to preserve existing map data.")
+        return
 
     # 2. Manual Overrides (User Request)
     OVERRIDE_PORTS = {
@@ -136,7 +158,7 @@ def main():
     known_stations = load_known_stations("app/data/Sites_20250725_Global.geojson")
     
     # 4. Determine Status & Build Meta Data
-    # Meta data structure: {"CODE": {"single_port": 1234, "network_port": 5678, "status": "Online"}}
+    # Meta data structure: {"CODE": {"single_port": 1234, "network_port": 5678, "status": "Online", "last_seen": "YYYY-MM-DD HH:MM"}}
     station_meta = {}
     
     all_codes = known_stations.union(active_streams)
@@ -150,11 +172,14 @@ def main():
     }
     NETWORK_PORTS_RANGE = range(4810, 4816)
 
+    current_time = time.strftime("%Y-%m-%d %H:%M")
+
     for code in all_codes:
         if code in EXCLUDED_STATIONS:
             continue
             
-        status = "Online" if code in active_streams else "Offline"
+        is_online = code in active_streams
+        status = "Online" if is_online else "Offline"
         
         # Determine specific ports
         seen_ports = mapping.get(code, {}).get('ports', [])
@@ -178,10 +203,22 @@ def main():
                 network_port = p
                 break
         
+        # Preserve Last Seen
+        last_seen = existing_meta.get(code, {}).get('last_seen', 'Never')
+        if is_online:
+            last_seen = current_time
+        
+        # If Offline, maybe preserve old port info?
+        # If we have no new port info (because offline), use old info if available
+        if status == "Offline" and code in existing_meta:
+            if not single_port: single_port = existing_meta[code].get('port')
+            if not network_port: network_port = existing_meta[code].get('network_port')
+
         station_meta[code] = {
             "status": status,
             "port": single_port, # Primary Single Port
-            "network_port": network_port # If available
+            "network_port": network_port, # If available
+            "last_seen": last_seen
         }
 
     # 5. Save/Export
@@ -201,7 +238,7 @@ def main():
 
     # C. QA Text Report
     report_lines = []
-    report_lines.append("QA PORT ASSIGNMENT & STATUS REPORT")
+    report_lines.append(f"QA PORT ASSIGNMENT & STATUS REPORT ({current_time})")
     report_lines.append("="*40)
     
     # Group by Port
@@ -210,7 +247,7 @@ def main():
     
     for code, data in station_meta.items():
         if data['status'] == 'Offline':
-            offline_stations.append(code)
+            offline_stations.append(f"{code} (Last: {data.get('last_seen', 'Never')})")
         
         p = data.get('port')
         if p:
@@ -228,8 +265,8 @@ def main():
     if offline_stations:
         report_lines.append(f"\nOFFLINE STATIONS ({len(offline_stations)}):")
         offline_stations.sort()
-        for i in range(0, len(offline_stations), 8):
-            report_lines.append(", ".join(offline_stations[i:i+8]))
+        for i in range(0, len(offline_stations), 3): # 3 per line since longer with timestamp
+            report_lines.append(", ".join(offline_stations[i:i+3]))
             
     report_content = "\n".join(report_lines)
     print(report_content)

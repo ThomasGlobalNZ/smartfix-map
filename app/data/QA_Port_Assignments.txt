@@ -1,4 +1,4 @@
-QA PORT ASSIGNMENT & STATUS REPORT
+QA PORT ASSIGNMENT & STATUS REPORT (2026-02-10 11:57)
 ========================================
 
 PORT 4801 (23 stations):
@@ -46,4 +46,4 @@ GSPO (Online), GSSB (Online), GSUT (Online), GSWR (Online), KTIA (Online)
 WARK (Online), WHNG (Online)
 
 OFFLINE STATIONS (1):
-GSGx
+GSGx (Last: Never)
