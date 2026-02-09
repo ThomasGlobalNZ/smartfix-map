@@ -24,17 +24,17 @@ jobs:
         run: |
           pip install -r requirements.txt
 
-      - name: Update Port Mappings
+      - name: Check API Status
         env:
-          NTRIP_USER: ${{ secrets.NTRIP_USER }}
-          NTRIP_PASSWORD: ${{ secrets.NTRIP_PASSWORD }}
-        run: python check_ntrip_ports.py
+          SMARTFIX_USER: ${{ secrets.SMARTFIX_USER }}
+          SMARTFIX_PASSWORD: ${{ secrets.SMARTFIX_PASSWORD }}
+        run: python check_api_status.py
 
-      - name: Check Station Health
-        env:
-          NTRIP_USER: ${{ secrets.NTRIP_USER }}
-          NTRIP_PASSWORD: ${{ secrets.NTRIP_PASSWORD }}
-        run: python check_station_health.py
+      # - name: Check Station Health (Disabled)
+      #   env:
+      #     NTRIP_USER: ${{ secrets.NTRIP_USER }}
+      #     NTRIP_PASSWORD: ${{ secrets.NTRIP_PASSWORD }}
+      #   run: python check_station_health.py
 
       - name: Update Map Regions
         run: python export_port_regions.py
@@ -43,7 +43,7 @@ jobs:
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git add app/data/*.json app/data/*.geojson app/data/*.txt "Geopackage Files/*.gpkg"
+          git add app/data/*.json app/data/*.geojson app/data/*.txt
           git commit -m "Automated Data Update" || echo "No changes to commit"
           git push
 

@@ -1,12 +1,13 @@
-QA PORT ASSIGNMENT & STATUS REPORT (2026-02-10 11:57)
+QA STATION STATUS REPORT (2026-02-10 12:14)
+Source: SmartFix API
 ========================================
 
 PORT 4801 (23 stations):
 BLUF (Online), DUND (Online), DUNT (Online), GSBA (Online), GSCM (Online)
 GSGR (Online), GSIN (Online), GSLW (Online), GSLX (Online), GSM2 (Online)
-GSOM (Online), GSQT (Online), GSQU (Online), GSRA (Online), GSTA (Online)
+GSOM (Online), GSQT (Online), GSQU (Online), GSRA (Offline), GSTA (Online)
 GSTW (Online), HAAS (Online), LEXA (Online), MAVL (Online), MTJO (Online)
-OUSD (Online), PYGR (Online), WAIM (Online)
+OUSD (Online), PYGR (Offline), WAIM (Online)
 
 PORT 4802 (18 stations):
 CLRR (Online), CMBL (Online), GLDB (Online), GSBN (Online), GSCT (Online)
@@ -16,7 +17,7 @@ TKHL (Online), WEST (Online), WRAU (Online)
 
 PORT 4803 (16 stations):
 CHTI (Online), GSAB (Online), GSAM (Online), GSBF (Online), GSBR (Online)
-GSCC (Online), GSDA (Online), GSKA (Online), GSLE (Online), GSLI (Online)
+GSCC (Online), GSDA (Online), GSKA (Online), GSLE (Offline), GSLI (Online)
 GSOX (Online), GSRL (Online), GSTI (Online), LY2T (Online), MQZG (Online)
 YALD (Online)
 
@@ -32,9 +33,9 @@ RGAR (Online), TAUP (Online), TBWT (Online), VGMT (Online), WANG (Online)
 WHKT (Online)
 
 PORT 4807 (21 stations):
-2406 (Online), ARTA (Online), CORM (Online), GSCA (Online), GSHO (Online)
+2406 (Online), ARTA (Online), CORM (Online), GSCA (Online), GSHO (Offline)
 GSHT (Online), GSMA (Online), GSMO (Online), GSOK (Online), GSPP (Online)
-GSPU (Online), GSRO (Online), GSTH (Online), GSTK (Online), GSTR (Online)
+GSPU (Offline), GSRO (Offline), GSTH (Online), GSTK (Online), GSTR (Online)
 GSTU (Online), GSWH (Online), GSWI (Online), HAMT (Online), RGUT (Online)
 TRNG (Online)
 
@@ -42,8 +43,11 @@ PORT 4809 (22 stations):
 AUCK (Online), AUKT (Online), GSAA (Online), GSAY (Online), GSBD (Online)
 GSCL (Online), GSDR (Online), GSGL (Online), GSHU (Online), GSKK (Online)
 GSMD (Online), GSMH (Online), GSPE (Online), GSPK (Online), GSPL (Online)
-GSPO (Online), GSSB (Online), GSUT (Online), GSWR (Online), KTIA (Online)
+GSPO (Offline), GSSB (Online), GSUT (Online), GSWR (Online), KTIA (Online)
 WARK (Online), WHNG (Online)
 
-OFFLINE STATIONS (1):
-GSGx (Last: Never)
+OFFLINE STATIONS (10):
+AUTO (Last: 2026-02-10 12:03), GSGx (Last: Never), GSHO (Last: 2026-02-10 12:03)
+GSLE (Last: 2026-02-10 12:03), GSPO (Last: 2026-02-10 12:03), GSPU (Last: 2026-02-10 12:03)
+GSRA (Last: 2026-02-10 12:03), GSRO (Last: 2026-02-10 12:03), PYGR (Last: 2026-02-10 12:03)
+VRSS (Last: 2026-02-10 12:03)
