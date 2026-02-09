@@ -8,8 +8,8 @@ from pyrtcm import RTCMReader, RTCMMessage
 
 # Configuration
 HOST = "www.smartfix.co.nz"
-USER = os.environ.get("NTRIP_USER", "THOMASM")
-PASSWORD = os.environ.get("NTRIP_PASSWORD", "THOMASM")
+USER = os.environ.get("NTRIP_USER")
+PASSWORD = os.environ.get("NTRIP_PASSWORD")
 TIMEOUT = 5 # seconds per station
 
 # MSM Message Types (contain sat counts)

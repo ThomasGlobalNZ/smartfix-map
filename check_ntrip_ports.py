@@ -11,8 +11,8 @@ EXCLUDED_STATIONS = ["TREC", "trec", "2GRO", "2GR0", "1778", "7651", "xGRX", "xg
 HOST = "www.smartfix.co.nz"
 # Check ports 4800 to 4815 (inclusive)
 PORTS = list(range(4800, 4816))
-USER = os.environ.get("NTRIP_USER", "THOMASM")
-PASSWORD = os.environ.get("NTRIP_PASSWORD", "THOMASM")
+USER = os.environ.get("NTRIP_USER")
+PASSWORD = os.environ.get("NTRIP_PASSWORD")
 OUTPUT_FILE = "app/data/station_port_mapping.json"
 
 def load_known_stations(geojson_path):
