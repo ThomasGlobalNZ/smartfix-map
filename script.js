@@ -334,6 +334,7 @@ Promise.all([
                     // Popup
                     // FIX: Use strict check from metadata
                     const networkPort = (metaData[code] && metaData[code].network_port) ? metaData[code].network_port : 'No';
+                    const lastSeen = (metaData[code] && metaData[code].last_seen) ? metaData[code].last_seen : 'Unknown';
 
                     const popupContent = `
                         <b>${code}</b><br>
@@ -342,7 +343,8 @@ Promise.all([
                         Mountpoint: <b>${code}singleADV4</b><br>
                         Single Site Port: <b>${port}</b><br>
                         Network Port: <b>${networkPort}</b><br>
-                        Region: ${portNames[port] || 'Unknown'}
+                        Region: ${portNames[port] || 'Unknown'}<br>
+                        <span style="font-size: 11px; color: #666;">Last Seen: ${lastSeen}</span>
                     `;
                     marker.bindPopup(popupContent);
 
