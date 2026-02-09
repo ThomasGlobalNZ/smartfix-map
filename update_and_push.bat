@@ -45,6 +45,10 @@ if /i "%confirm%" NEQ "Y" goto :EOF
 
 git add .
 git commit -m "Manual Update via Batch Script"
+
+echo [Running Git Pull to sync remote changes...]
+git pull --rebase
+
 git push
 
 echo.
