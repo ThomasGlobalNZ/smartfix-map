@@ -1,0 +1,367 @@
+{
+    "CORM": {
+        "network_port": null,
+        "port": null,
+        "status": "Offline"
+    },
+    "GSAA": {
+        "network_port": null,
+        "port": null,
+        "status": "Offline"
+    },
+    "GSAB": {
+        "network_port": null,
+        "port": null,
+        "status": "Offline"
+    },
+    "GSAM": {
+        "network_port": null,
+        "port": null,
+        "status": "Offline"
+    },
+    "GSAY": {
+        "network_port": null,
+        "port": null,
+        "status": "Offline"
+    },
+    "GSBA": {
+        "network_port": null,
+        "port": null,
+        "status": "Offline"
+    },
+    "GSBD": {
+        "network_port": null,
+        "port": null,
+        "status": "Offline"
+    },
+    "GSBF": {
+        "network_port": null,
+        "port": null,
+        "status": "Offline"
+    },
+    "GSBN": {
+        "network_port": null,
+        "port": null,
+        "status": "Offline"
+    },
+    "GSBR": {
+        "network_port": null,
+        "port": null,
+        "status": "Offline"
+    },
+    "GSCA": {
+        "network_port": null,
+        "port": null,
+        "status": "Offline"
+    },
+    "GSCC": {
+        "network_port": null,
+        "port": null,
+        "status": "Offline"
+    },
+    "GSCL": {
+        "network_port": null,
+        "port": null,
+        "status": "Offline"
+    },
+    "GSCM": {
+        "network_port": null,
+        "port": null,
+        "status": "Offline"
+    },
+    "GSCT": {
+        "network_port": null,
+        "port": null,
+        "status": "Offline"
+    },
+    "GSDA": {
+        "network_port": null,
+        "port": null,
+        "status": "Offline"
+    },
+    "GSDR": {
+        "network_port": null,
+        "port": null,
+        "status": "Offline"
+    },
+    "GSGL": {
+        "network_port": null,
+        "port": null,
+        "status": "Offline"
+    },
+    "GSGR": {
+        "network_port": null,
+        "port": null,
+        "status": "Offline"
+    },
+    "GSGx": {
+        "network_port": null,
+        "port": null,
+        "status": "Offline"
+    },
+    "GSHO": {
+        "network_port": null,
+        "port": null,
+        "status": "Offline"
+    },
+    "GSHT": {
+        "network_port": null,
+        "port": null,
+        "status": "Offline"
+    },
+    "GSHU": {
+        "network_port": null,
+        "port": null,
+        "status": "Offline"
+    },
+    "GSHW": {
+        "network_port": null,
+        "port": null,
+        "status": "Offline"
+    },
+    "GSIN": {
+        "network_port": null,
+        "port": null,
+        "status": "Offline"
+    },
+    "GSKA": {
+        "network_port": null,
+        "port": null,
+        "status": "Offline"
+    },
+    "GSKK": {
+        "network_port": null,
+        "port": null,
+        "status": "Offline"
+    },
+    "GSLE": {
+        "network_port": null,
+        "port": null,
+        "status": "Offline"
+    },
+    "GSLI": {
+        "network_port": null,
+        "port": null,
+        "status": "Offline"
+    },
+    "GSLW": {
+        "network_port": null,
+        "port": null,
+        "status": "Offline"
+    },
+    "GSLX": {
+        "network_port": null,
+        "port": null,
+        "status": "Offline"
+    },
+    "GSMA": {
+        "network_port": null,
+        "port": null,
+        "status": "Offline"
+    },
+    "GSMD": {
+        "network_port": null,
+        "port": null,
+        "status": "Offline"
+    },
+    "GSMH": {
+        "network_port": null,
+        "port": null,
+        "status": "Offline"
+    },
+    "GSMO": {
+        "network_port": null,
+        "port": null,
+        "status": "Offline"
+    },
+    "GSNA": {
+        "network_port": null,
+        "port": null,
+        "status": "Offline"
+    },
+    "GSNE": {
+        "network_port": null,
+        "port": null,
+        "status": "Offline"
+    },
+    "GSNP": {
+        "network_port": null,
+        "port": null,
+        "status": "Offline"
+    },
+    "GSOK": {
+        "network_port": null,
+        "port": null,
+        "status": "Offline"
+    },
+    "GSOM": {
+        "network_port": null,
+        "port": null,
+        "status": "Offline"
+    },
+    "GSOX": {
+        "network_port": null,
+        "port": null,
+        "status": "Offline"
+    },
+    "GSP2": {
+        "network_port": null,
+        "port": null,
+        "status": "Offline"
+    },
+    "GSPC": {
+        "network_port": null,
+        "port": null,
+        "status": "Offline"
+    },
+    "GSPE": {
+        "network_port": null,
+        "port": null,
+        "status": "Offline"
+    },
+    "GSPK": {
+        "network_port": null,
+        "port": null,
+        "status": "Offline"
+    },
+    "GSPL": {
+        "network_port": null,
+        "port": null,
+        "status": "Offline"
+    },
+    "GSPM": {
+        "network_port": null,
+        "port": null,
+        "status": "Offline"
+    },
+    "GSPN": {
+        "network_port": null,
+        "port": null,
+        "status": "Offline"
+    },
+    "GSPO": {
+        "network_port": null,
+        "port": null,
+        "status": "Offline"
+    },
+    "GSPP": {
+        "network_port": null,
+        "port": null,
+        "status": "Offline"
+    },
+    "GSPU": {
+        "network_port": null,
+        "port": null,
+        "status": "Offline"
+    },
+    "GSQT": {
+        "network_port": null,
+        "port": null,
+        "status": "Offline"
+    },
+    "GSQU": {
+        "network_port": null,
+        "port": null,
+        "status": "Offline"
+    },
+    "GSRA": {
+        "network_port": null,
+        "port": null,
+        "status": "Offline"
+    },
+    "GSRL": {
+        "network_port": null,
+        "port": null,
+        "status": "Offline"
+    },
+    "GSRO": {
+        "network_port": null,
+        "port": null,
+        "status": "Offline"
+    },
+    "GSSB": {
+        "network_port": null,
+        "port": null,
+        "status": "Offline"
+    },
+    "GSTA": {
+        "network_port": null,
+        "port": null,
+        "status": "Offline"
+    },
+    "GSTH": {
+        "network_port": null,
+        "port": null,
+        "status": "Offline"
+    },
+    "GSTI": {
+        "network_port": null,
+        "port": null,
+        "status": "Offline"
+    },
+    "GSTK": {
+        "network_port": null,
+        "port": null,
+        "status": "Offline"
+    },
+    "GSTR": {
+        "network_port": null,
+        "port": null,
+        "status": "Offline"
+    },
+    "GSTU": {
+        "network_port": null,
+        "port": null,
+        "status": "Offline"
+    },
+    "GSTW": {
+        "network_port": null,
+        "port": null,
+        "status": "Offline"
+    },
+    "GSUH": {
+        "network_port": null,
+        "port": null,
+        "status": "Offline"
+    },
+    "GSUT": {
+        "network_port": null,
+        "port": null,
+        "status": "Offline"
+    },
+    "GSWA": {
+        "network_port": null,
+        "port": null,
+        "status": "Offline"
+    },
+    "GSWH": {
+        "network_port": null,
+        "port": null,
+        "status": "Offline"
+    },
+    "GSWI": {
+        "network_port": null,
+        "port": null,
+        "status": "Offline"
+    },
+    "GSWR": {
+        "network_port": null,
+        "port": null,
+        "status": "Offline"
+    },
+    "GSWU": {
+        "network_port": null,
+        "port": null,
+        "status": "Offline"
+    },
+    "MAVL": {
+        "network_port": null,
+        "port": null,
+        "status": "Offline"
+    },
+    "OUSD": {
+        "network_port": null,
+        "port": null,
+        "status": "Offline"
+    }
+}

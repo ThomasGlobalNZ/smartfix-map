@@ -1,0 +1,742 @@
+{
+  "AUCK": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "KTIA": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "WHNG": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "GSWR": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "WARK": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "GSDR": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "CORM": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "GSMH": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "HIKB": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "GSSB": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "TRNG": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "HAMT": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "WHKT": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "MAHO": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "RGAR": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "GSRO": {
+    "status": "Offline",
+    "connected": false,
+    "receiving": false
+  },
+  "ARTA": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "GSHx": {
+    "status": "Offline",
+    "connected": false,
+    "receiving": false
+  },
+  "GISB": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "GSPU": {
+    "status": "Offline",
+    "connected": false,
+    "receiving": false
+  },
+  "2406": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "GSTH": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "TAUP": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "NPLY": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "VGMT": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "GSTW": {
+    "status": "Offline",
+    "connected": true,
+    "receiving": false
+  },
+  "HAST": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "WANG": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "DNVK": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "GSRA": {
+    "status": "Offline",
+    "connected": false,
+    "receiving": false
+  },
+  "LEVN": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "PAEK": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "GSUT": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "WRPA": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "AVLN": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "GSAM": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "TRWH": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "GSLI": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "WGTN": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "GSOX": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "BTHL": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "GSCL": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "trec": {
+    "status": "Offline",
+    "connected": false,
+    "receiving": false
+  },
+  "7170": {
+    "status": "Offline",
+    "connected": false,
+    "receiving": false
+  },
+  "0335": {
+    "status": "Offline",
+    "connected": false,
+    "receiving": false
+  },
+  "GSWF": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "GSDY": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "3967": {
+    "status": "Offline",
+    "connected": true,
+    "receiving": false
+  },
+  "3824": {
+    "status": "Offline",
+    "connected": false,
+    "receiving": false
+  },
+  "0566": {
+    "status": "Offline",
+    "connected": false,
+    "receiving": false
+  },
+  "TEST": {
+    "status": "Offline",
+    "connected": false,
+    "receiving": false
+  },
+  "4068": {
+    "status": "Offline",
+    "connected": false,
+    "receiving": false
+  },
+  "PENL": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "GSHW": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "GLDB": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "GSWI": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "TKHL": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "NLSN": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "GSWH": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "WRAU": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "GSHT": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "WEST": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "GSCA": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "CMBL": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "GSPN": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "KAIK": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "GSCC": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "HANM": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "GSAB": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "MRBL": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "GSBA": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "HOKI": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "GSTI": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "LKTA": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "GSCT": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "YALD": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "GSQU": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "METH": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "MQZG": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "GSLX": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "CHTI": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "MTJO": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "GSTA": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "HAAS": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "OUSD": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "WAIM": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "LEXA": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "DUND": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "MAVL": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "PYGR": {
+    "status": "Offline",
+    "connected": false,
+    "receiving": false
+  },
+  "BLUF": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "CLRR": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "SCTB": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "RGUT": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "GSRL": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "GSAY": {
+    "status": "Offline",
+    "connected": true,
+    "receiving": false
+  },
+  "GSPM": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "GSBR": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "GSQT": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "GSIN": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "GSMD": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "GSMO": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "GSLW": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "GSMA": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "GSHU": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "GSBN": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "GSKK": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "GSKA": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "GSUH": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "GSP2": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "GSPL": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "GSNP": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "GSWA": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "GSDA": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "GSPK": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "GSOK": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "GSM2": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "GSPE": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "GSHO": {
+    "status": "Offline",
+    "connected": false,
+    "receiving": false
+  },
+  "GSOM": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "GSAA": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "GSNE": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "GSCM": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "GSTR": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "GSLE": {
+    "status": "Offline",
+    "connected": false,
+    "receiving": false
+  },
+  "GSBD": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "GSTK": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "GSPC": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "GSNA": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "GSWU": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "GSPP": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "2GR0": {
+    "status": "Offline",
+    "connected": false,
+    "receiving": false
+  },
+  "AUKT": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "WGTT": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "NSFT": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "LY2T": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "DUNT": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "GSBF": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "GSTU": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "GSPB": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "xGRX": {
+    "status": "Offline",
+    "connected": false,
+    "receiving": false
+  },
+  "GSGL": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "NTGT": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "7651": {
+    "status": "Offline",
+    "connected": false,
+    "receiving": false
+  },
+  "JTGT": {
+    "status": "Offline",
+    "connected": true,
+    "receiving": false
+  },
+  "TBWT": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "SSFT": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  },
+  "GSGR": {
+    "status": "Online",
+    "connected": true,
+    "receiving": true
+  }
+}
