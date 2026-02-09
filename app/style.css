@@ -1,0 +1,764 @@
+/* Remove Tooltip Arrows (White Flags) */
+.leaflet-tooltip-left::before,
+.leaflet-tooltip-right::before,
+.leaflet-tooltip-top::before,
+.leaflet-tooltip-bottom::before {
+    display: none !important;
+}
+
+/* Global Styles */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#map {
+    position: absolute;
+    top: 50px;
+    /* Header Height */
+    bottom: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+/* Header Bar */
+#top-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: white;
+    z-index: 2000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Flex container is already set in #top-header */
+
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    height: 100%;
+    padding: 0 15px;
+    max-width: 100%;
+}
+
+.header-logo {
+    height: 38px;
+    /* Fits nicely in 50px header */
+    width: auto;
+    display: block;
+}
+
+.header-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    /* Prevent spill on very small screens */
+}
+
+.header-text h2 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.header-text .subtitle {
+    font-size: 12px;
+    color: #666;
+    margin-top: 2px;
+    line-height: 1.2;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Mobile Tweak: Shrink text if needed */
+@media only screen and (max-width: 400px) {
+    .header-logo {
+        height: 32px;
+    }
+
+    .header-text h2 {
+        font-size: 15px;
+    }
+}
+
+.map-title {
+    /* Styles are handled by #top-header now */
+}
+
+/* Controls Container (Top Right) */
+.controls-container {
+    position: absolute;
+    top: 120px;
+    /* Moved down significantly to clear Layer Control (TopRight) */
+    right: 20px;
+    z-index: 900;
+    /* Below Leaflet Controls (1000) */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 300px;
+    align-items: flex-end;
+}
+
+/* Ensure boxes fill width or behave nicely */
+.control-box {
+    background: white;
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px;
+    pointer-events: auto;
+    width: 360px;
+    max-width: 90%;
+    box-sizing: border-box;
+}
+
+/* Fix for "Black Box" focus outline on clicked regions */
+path.leaflet-interactive:focus {
+    outline: none;
+}
+
+/* Search Box */
+.search-box {
+    display: flex;
+    gap: 5px;
+    position: relative;
+}
+
+.results-list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 10000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 2px;
+}
+
+.result-item {
+    padding: 8px;
+    cursor: pointer;
+    font-size: 13px;
+    border-bottom: 1px solid #eee;
+    color: #333;
+}
+
+.result-item:hover {
+    background-color: #f0f0f0;
+}
+
+.result-item:last-child {
+    border-bottom: none;
+}
+
+#address-input {
+    flex-grow: 1;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 8px;
+    outline: none;
+}
+
+#address-input:focus {
+    border-color: #007bff;
+}
+
+#search-btn,
+#locate-btn,
+#measure-btn,
+#nearest-btn {
+    background-color: #2196F3;
+    /* Blue default */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+#search-btn:hover,
+#locate-btn:hover,
+#measure-btn:hover,
+#nearest-btn:hover {
+    background-color: #1976D2;
+    /* Darker blue on hover */
+}
+
+/* Action Buttons */
+.action-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    /* right align buttons */
+}
+
+/* All tool buttons default to blue */
+.action-buttons button {
+    background: #2196F3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.action-buttons button:hover {
+    background: #1976D2;
+}
+
+#measure-btn.active,
+#nearest-btn.active,
+#locate-btn.active,
+#coverage-btn.active,
+#ppm-btn.active,
+#info-btn.active {
+    background: #4CAF50 !important;
+    /* Green when active */
+    color: white;
+}
+
+/* Info Panel */
+.info-panel {
+    position: relative;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.close-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #666;
+}
+
+.close-btn:hover {
+    color: #333;
+}
+
+#info-content h4 {
+    margin: 0 0 5px 0;
+    color: #333;
+}
+
+#info-content p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Map Popups */
+.leaflet-popup-content {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.leaflet-popup-content b {
+    color: #007bff;
+}
+
+/* Pinned Tooltip (Transparency) */
+.pinned-tooltip {
+    background-color: rgba(255, 255, 255, 0.9) !important;
+    /* Semi-transparent background */
+    border-color: rgba(200, 200, 200, 0.8) !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2) !important;
+}
+
+.leaflet-tooltip-left.pinned-tooltip::before {
+    border-left-color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.leaflet-tooltip-right.pinned-tooltip::before {
+    border-right-color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Custom Popup to mimic Tooltip */
+.leaflet-popup.custom-popup .leaflet-popup-content-wrapper {
+    background: rgba(255, 255, 255, 0.9);
+    /* Transparent match */
+    padding: 0;
+    /* Remove default padding */
+    border-radius: 6px;
+    /* Match standard tooltip radius roughly */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.leaflet-popup.custom-popup .leaflet-popup-content {
+    margin: 6px 10px;
+    /* Re-add tooltip-like padding */
+    width: auto !important;
+    /* Allow shrink */
+}
+
+.leaflet-popup.custom-popup .leaflet-popup-tip {
+    background: rgba(255, 255, 255, 0.9);
+}
+
+/* Station Labels */
+.station-label {
+    background: none;
+    border: none;
+    box-shadow: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 12px;
+    text-shadow: 1px 1px 0 #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+}
+
+/* Legend (Stacked in Controls) */
+.legend-container {
+    /* Removed absolute positioning */
+    font-size: 12px;
+    color: #333;
+    /* width handled by .control-box parent rules */
+}
+
+.legend-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3px;
+}
+
+/* Custom Layer Toggle - Simulated Radio Buttons */
+.leaflet-control-layers-selector[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 13px;
+    height: 13px;
+    border: 1px solid #999;
+    border-radius: 50%;
+    /* Make round */
+    margin: 3px;
+    position: relative;
+    vertical-align: middle;
+    outline: none;
+    cursor: pointer;
+}
+
+.leaflet-control-layers-selector[type="checkbox"]:checked {
+    background: #007bff;
+    border-color: #007bff;
+}
+
+.leaflet-control-layers-selector[type="checkbox"]:checked::after {
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: white;
+    border-radius: 50%;
+    top: 3px;
+    left: 3px;
+}
+
+.legend-color {
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    margin-right: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+#coverage-btn.active {
+    background-color: #28a745;
+}
+
+/* Coordinate Display */
+.coords-box {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-family: monospace;
+    font-weight: bold;
+    color: #333;
+    border: 1px solid #ccc;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    user-select: none;
+}
+
+/* Mobile Responsiveness */
+@media only screen and (max-width: 600px) {
+
+    /* Hide Legend on Mobile */
+    .legend-container {
+        display: none !important;
+    }
+
+    /* Controls: Align Bottom Right */
+    .controls-container {
+        top: auto;
+        bottom: 50px;
+        /* Sits above the 40px coord bar + some gap */
+        right: 10px;
+        left: 10px;
+        /* Constrain width */
+        width: auto;
+        flex-direction: column-reverse;
+        /* Search at bottom */
+        align-items: flex-end;
+        /* Right align everything */
+        pointer-events: none;
+        gap: 8px;
+    }
+
+    /* Action Buttons (Map Tools) */
+    .control-box.action-buttons {
+        pointer-events: auto;
+        width: auto;
+        /* Shrinks to fit content */
+        margin: 0;
+        padding: 5px 8px;
+        /* Compact padding */
+        display: flex;
+        flex-direction: row;
+        /* Horizontal */
+        align-items: center;
+        gap: 0;
+        /* Let children handle gap */
+    }
+
+    .action-buttons>div:first-child {
+        /* Hide "MAP TOOLS" label on mobile to save space */
+        display: none;
+    }
+
+    /* Search Box: Align Right, Matches Tools Width/Edge */
+    .control-box.search-box {
+        pointer-events: auto;
+        width: 100%;
+        /* Full width of container (controlled by left/right on container) */
+        max-width: 280px;
+        /* Cap width matches general feel */
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    /* Suggestions Pop UP above search bar */
+    .results-list {
+        top: auto;
+        bottom: 100%;
+        margin-bottom: 5px;
+        max-height: 40vh;
+    }
+
+    /* Custom Layer Toggle - REMOVED */
+
+    /* Layout: Top Left Standard */
+    .leaflet-top.leaflet-left {
+        display: block;
+        /* Revert flex */
+    }
+
+    .leaflet-top.leaflet-left .leaflet-control {
+        margin-top: 10px !important;
+        margin-left: 10px !important;
+    }
+
+    /* Coordinate Box: Full Bottom Bar */
+    .coords-box {
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        border-radius: 0;
+        text-align: center;
+        background: #f8f9fa;
+        /* Light grey for "bar" feel */
+        border-top: 1px solid #ddd;
+        box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+        min-width: 0;
+        height: 44px;
+        /* Matches mobile tool buttons */
+        /* Tappable height */
+        line-height: 44px;
+        padding: 0;
+        font-size: 13px;
+        z-index: 2000;
+        /* Top of everything */
+    }
+
+    /* Force consistent width for Search & Tools on Mobile */
+    @media (max-width: 600px) {
+        /* Handled in main mobile block below */
+    }
+
+    /* Header Logic */
+    #top-header {
+        height: auto;
+        min-height: 50px;
+        padding: 5px 0;
+    }
+
+    .header-content {
+        flex-wrap: wrap;
+        /* Allow wrapping */
+        justify-content: center;
+        text-align: center;
+    }
+
+    .header-logo {
+        height: 30px;
+        /* Smaller logo */
+    }
+
+    .header-text h2 {
+        font-size: 14px;
+        white-space: normal;
+        /* Allow text wrap */
+        line-height: 1.2;
+    }
+
+    .header-text .subtitle {
+        display: none;
+        /* Hide subtitle on very small screens to save vertical space */
+    }
+
+    .leaflet-control-layers {
+        margin-top: 10px !important;
+    }
+}
+
+/* MAP TOOLS Heading & Larger Icons on Mobile */
+@media (max-width: 600px) {
+    .action-buttons button {
+        width: 44px !important;
+        height: 44px !important;
+        font-size: 18px !important;
+    }
+
+    .action-buttons div[style*="font-weight: bold"] {
+        display: none !important;
+        /* Hide "Map Tools" heading on mobile */
+    }
+}
+
+
+/* Move all top-left controls down below the fixed header (if needed, but map starts at 50px) */
+/* The map container #map starts at 50px. Leaflet controls are relative to #map. */
+/* So top: 0 in leaflet-top is actually 50px down from window top. */
+/* User mentioned "gap above address bar". If they mean browser address bar, we can't fix that. */
+/* If they mean "gap between header and map controls", we should reduce margin-top of controls. */
+
+/* Force Horizontal Layout for Top Left Controls (Basemap + Toggle) */
+/* Vertical Layout for Top Left Controls */
+.leaflet-top.leaflet-left {
+    display: flex;
+    flex-direction: column;
+    /* Stack vertically (Toggle Top, Basemap Bottom) */
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+/* Reset default Leaflet control margins to prevent double spacing */
+.leaflet-top.leaflet-left .leaflet-control {
+    margin: 0 !important;
+}
+
+/* Mobile: Increase top margin, reduce gap between controls */
+@media (max-width: 600px) {
+    .leaflet-top.leaflet-left {
+        margin-top: 20px;
+        /* More space from top on mobile */
+        gap: 5px;
+        /* Smaller gap between Toggle and Basemap */
+    }
+}
+
+/* Hide Info Button on Desktop */
+/* Info button now visible on desktop too */
+/* @media (min-width: 601px) {
+    #info-btn {
+        display: none !important;
+    }
+} */
+
+/* Mobile Info Modal */
+.info-modal-backdrop {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    z-index: 3000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Black w/ opacity */
+    justify-content: center;
+    align-items: center;
+}
+
+.info-modal-content {
+    background-color: #fefefe;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 8px;
+    position: relative;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.close-modal {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+    top: 5px;
+}
+
+.close-modal:hover,
+.close-modal:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Tool Instruction Box (Cursor Follower) */
+.tool-instruction {
+    position: absolute;
+    background: white;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 13px;
+    color: #333;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    pointer-events: none;
+    /* Let clicks pass through */
+    z-index: 5000;
+    white-space: nowrap;
+    transform: translate(15px, 15px);
+    /* Offset from cursor */
+}
+
+/* Distance Label (Halo Text) */
+.distance-label-halo {
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    font-size: 13px;
+    font-weight: bold;
+    color: #000;
+    /* Stronger Halo */
+    text-shadow:
+        -2px -2px 0 #fff, 2px -2px 0 #fff, -2px 2px 0 #fff, 2px 2px 0 #fff,
+        -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff,
+        0px 0px 4px rgba(255, 255, 255, 1);
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+    text-align: center;
+}
+
+/* User Location Marker (Pulse Effect) */
+.user-location-dot {
+    width: 16px;
+    height: 16px;
+    background-color: #2196F3;
+    border: 3px solid white;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+    animation: pulse-blue 2s infinite;
+}
+
+@keyframes pulse-blue {
+    0% {
+        box-shadow: 0 0 0 0 rgba(33, 150, 243, 0.7);
+    }
+
+    70% {
+        box-shadow: 0 0 0 10px rgba(33, 150, 243, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(33, 150, 243, 0);
+    }
+}
+
+/* Layer Toggle Control (Top Bar) */
+.layer-toggle-control {
+    background: white;
+    border-radius: 44px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.4);
+    display: flex;
+    overflow: hidden;
+    /* margin removed, handled by flex container gap */
+    border: 1px solid #ccc;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.layer-toggle-btn {
+    padding: 6px 12px;
+    cursor: pointer;
+    background: #fff;
+    color: #333;
+    border-right: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    user-select: none;
+    transition: background 0.2s, color 0.2s;
+}
+
+.layer-toggle-btn:last-child {
+    border-right: none;
+}
+
+.layer-toggle-btn:hover {
+    background: #f0f0f0;
+}
+
+.layer-toggle-btn.active {
+    background: #007bff;
+    color: white;
+}

@@ -1,0 +1,63 @@
+QA PORT ASSIGNMENT & STATUS REPORT
+========================================
+
+PORT 4801 (8 stations):
+DUNT (Online), GSGR (Online), GSIN (Online), GSM2 (Online), GSQU (Online)
+LEXA (Online), MAVL (Online), PYGR (Online)
+
+PORT 4802 (10 stations):
+CLRR (Online), GLDB (Online), GSBN (Online), GSNE (Online), GSPC (Online)
+HAAS (Online), HOKI (Online), JTGT (Online), NSFT (Online), WEST (Online)
+
+PORT 4803 (9 stations):
+CHTI (Online), GSDA (Online), GSKA (Online), GSLE (Online), HANM (Online)
+LKTA (Online), LY2T (Online), MQZG (Online), YALD (Online)
+
+PORT 4804 (5 stations):
+GSP2 (Online), GSUH (Online), LEVN (Online), PAEK (Online), WGTT (Online)
+
+PORT 4806 (15 stations):
+DNVK (Online), GISB (Online), GSHW (Online), GSNA (Online), GSNP (Online)
+GSPM (Online), GSPN (Online), GSWU (Online), HAST (Online), HIKB (Online)
+NPLY (Online), NTGT (Online), TBWT (Online), VGMT (Online), WANG (Online)
+
+PORT 4807 (21 stations):
+2406 (Online), ARTA (Online), GSCA (Online), GSHO (Online), GSHT (Online)
+GSMA (Online), GSMO (Online), GSOK (Online), GSPP (Online), GSPU (Online)
+GSRO (Online), GSTR (Online), GSTU (Online), GSWH (Online), HAMT (Online)
+MAHO (Online), RGAR (Online), RGUT (Online), TAUP (Online), TRNG (Online)
+WHKT (Online)
+
+PORT 4809 (26 stations):
+AUCK (Online), AUKT (Online), CORM (Online), GSAA (Online), GSAY (Online)
+GSBD (Online), GSCL (Online), GSDR (Online), GSGL (Online), GSHU (Online)
+GSKK (Online), GSMD (Online), GSMH (Online), GSPE (Online), GSPK (Online)
+GSPL (Online), GSPO (Online), GSSB (Online), GSTH (Online), GSTK (Online)
+GSUT (Online), GSWI (Online), GSWR (Online), KTIA (Online), WARK (Online)
+WHNG (Online)
+
+PORT 4810 (1 stations):
+VRSS (Online)
+
+PORT 4811 (12 stations):
+BLUF (Online), DUND (Online), GSBA (Online), GSCM (Online), GSLW (Online)
+GSLX (Online), GSOM (Online), GSQT (Online), GSRA (Online), GSTA (Online)
+GSTW (Online), OUSD (Online)
+
+PORT 4812 (5 stations):
+CMBL (Online), KAIK (Online), NLSN (Online), TKHL (Online), WRAU (Online)
+
+PORT 4813 (14 stations):
+GSAB (Online), GSAM (Online), GSBF (Online), GSBR (Online), GSCC (Online)
+GSCT (Online), GSLI (Online), GSOX (Online), GSRL (Online), GSTI (Online)
+METH (Online), MRBL (Online), MTJO (Online), WAIM (Online)
+
+PORT 4814 (6 stations):
+AVLN (Online), BTHL (Online), GSWA (Online), TRWH (Online), WGTN (Online)
+WRPA (Online)
+
+PORT 4815 (1 stations):
+AUTO (Online)
+
+OFFLINE STATIONS (3):
+GSGx, GSMG, xGRX

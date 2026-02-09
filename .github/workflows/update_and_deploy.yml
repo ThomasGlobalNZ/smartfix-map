@@ -1,0 +1,54 @@
+name: Update Data and Deploy
+
+on:
+  schedule:
+    - cron: '0 17 * * *' # 6:00 AM NZDT (17:00 UTC)
+  workflow_dispatch:
+
+jobs:
+  update-and-deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install Dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Update Port Mappings
+        env:
+          NTRIP_USER: ${{ secrets.NTRIP_USER }}
+          NTRIP_PASSWORD: ${{ secrets.NTRIP_PASSWORD }}
+        run: python check_ntrip_ports.py
+
+      - name: Check Station Health
+        env:
+          NTRIP_USER: ${{ secrets.NTRIP_USER }}
+          NTRIP_PASSWORD: ${{ secrets.NTRIP_PASSWORD }}
+        run: python check_station_health.py
+
+      - name: Update Map Regions
+        run: python export_port_regions.py
+
+      - name: Commit and Push Data Updates
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add app/data/*.json app/data/*.geojson app/data/*.txt "Geopackage Files/*.gpkg"
+          git commit -m "Automated Data Update" || echo "No changes to commit"
+          git push
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: app
+          branch: gh-pages

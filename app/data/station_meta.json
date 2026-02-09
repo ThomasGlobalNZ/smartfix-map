@@ -1,0 +1,662 @@
+{
+    "2406": {
+        "network_port": null,
+        "port": 4807,
+        "status": "Online"
+    },
+    "ARTA": {
+        "network_port": null,
+        "port": 4807,
+        "status": "Online"
+    },
+    "AUCK": {
+        "network_port": null,
+        "port": 4809,
+        "status": "Online"
+    },
+    "AUKT": {
+        "network_port": null,
+        "port": 4809,
+        "status": "Online"
+    },
+    "AUTO": {
+        "network_port": 4815,
+        "port": null,
+        "status": "Online"
+    },
+    "AVLN": {
+        "network_port": 4814,
+        "port": 4804,
+        "status": "Online"
+    },
+    "BLUF": {
+        "network_port": 4811,
+        "port": 4801,
+        "status": "Online"
+    },
+    "BTHL": {
+        "network_port": 4814,
+        "port": 4804,
+        "status": "Online"
+    },
+    "CHTI": {
+        "network_port": null,
+        "port": 4803,
+        "status": "Online"
+    },
+    "CLRR": {
+        "network_port": null,
+        "port": 4802,
+        "status": "Online"
+    },
+    "CMBL": {
+        "network_port": 4812,
+        "port": 4802,
+        "status": "Online"
+    },
+    "CORM": {
+        "network_port": null,
+        "port": 4807,
+        "status": "Online"
+    },
+    "DNVK": {
+        "network_port": null,
+        "port": 4804,
+        "status": "Online"
+    },
+    "DUND": {
+        "network_port": 4811,
+        "port": 4801,
+        "status": "Online"
+    },
+    "DUNT": {
+        "network_port": null,
+        "port": 4801,
+        "status": "Online"
+    },
+    "GISB": {
+        "network_port": null,
+        "port": 4806,
+        "status": "Online"
+    },
+    "GLDB": {
+        "network_port": null,
+        "port": 4802,
+        "status": "Online"
+    },
+    "GSAA": {
+        "network_port": null,
+        "port": 4809,
+        "status": "Online"
+    },
+    "GSAB": {
+        "network_port": 4813,
+        "port": 4803,
+        "status": "Online"
+    },
+    "GSAM": {
+        "network_port": 4813,
+        "port": 4803,
+        "status": "Online"
+    },
+    "GSAY": {
+        "network_port": null,
+        "port": 4809,
+        "status": "Online"
+    },
+    "GSBA": {
+        "network_port": 4811,
+        "port": 4801,
+        "status": "Online"
+    },
+    "GSBD": {
+        "network_port": null,
+        "port": 4809,
+        "status": "Online"
+    },
+    "GSBF": {
+        "network_port": 4813,
+        "port": 4803,
+        "status": "Online"
+    },
+    "GSBN": {
+        "network_port": null,
+        "port": 4802,
+        "status": "Online"
+    },
+    "GSBR": {
+        "network_port": 4813,
+        "port": 4803,
+        "status": "Online"
+    },
+    "GSCA": {
+        "network_port": null,
+        "port": 4807,
+        "status": "Online"
+    },
+    "GSCC": {
+        "network_port": 4813,
+        "port": 4803,
+        "status": "Online"
+    },
+    "GSCL": {
+        "network_port": null,
+        "port": 4809,
+        "status": "Online"
+    },
+    "GSCM": {
+        "network_port": 4811,
+        "port": 4801,
+        "status": "Online"
+    },
+    "GSCT": {
+        "network_port": 4812,
+        "port": 4802,
+        "status": "Online"
+    },
+    "GSDA": {
+        "network_port": null,
+        "port": 4803,
+        "status": "Online"
+    },
+    "GSDR": {
+        "network_port": null,
+        "port": 4809,
+        "status": "Online"
+    },
+    "GSGL": {
+        "network_port": null,
+        "port": 4809,
+        "status": "Online"
+    },
+    "GSGR": {
+        "network_port": null,
+        "port": 4801,
+        "status": "Online"
+    },
+    "GSGx": {
+        "network_port": null,
+        "port": null,
+        "status": "Offline"
+    },
+    "GSHO": {
+        "network_port": null,
+        "port": 4807,
+        "status": "Online"
+    },
+    "GSHT": {
+        "network_port": null,
+        "port": 4807,
+        "status": "Online"
+    },
+    "GSHU": {
+        "network_port": null,
+        "port": 4809,
+        "status": "Online"
+    },
+    "GSHW": {
+        "network_port": null,
+        "port": 4806,
+        "status": "Online"
+    },
+    "GSIN": {
+        "network_port": null,
+        "port": 4801,
+        "status": "Online"
+    },
+    "GSKA": {
+        "network_port": null,
+        "port": 4803,
+        "status": "Online"
+    },
+    "GSKK": {
+        "network_port": null,
+        "port": 4809,
+        "status": "Online"
+    },
+    "GSLE": {
+        "network_port": null,
+        "port": 4803,
+        "status": "Online"
+    },
+    "GSLI": {
+        "network_port": 4813,
+        "port": 4803,
+        "status": "Online"
+    },
+    "GSLW": {
+        "network_port": 4811,
+        "port": 4801,
+        "status": "Online"
+    },
+    "GSLX": {
+        "network_port": 4811,
+        "port": 4801,
+        "status": "Online"
+    },
+    "GSM2": {
+        "network_port": null,
+        "port": 4801,
+        "status": "Online"
+    },
+    "GSMA": {
+        "network_port": null,
+        "port": 4807,
+        "status": "Online"
+    },
+    "GSMD": {
+        "network_port": null,
+        "port": 4809,
+        "status": "Online"
+    },
+    "GSMH": {
+        "network_port": null,
+        "port": 4809,
+        "status": "Online"
+    },
+    "GSMO": {
+        "network_port": null,
+        "port": 4807,
+        "status": "Online"
+    },
+    "GSNA": {
+        "network_port": null,
+        "port": 4806,
+        "status": "Online"
+    },
+    "GSNE": {
+        "network_port": null,
+        "port": 4802,
+        "status": "Online"
+    },
+    "GSNP": {
+        "network_port": null,
+        "port": 4806,
+        "status": "Online"
+    },
+    "GSOK": {
+        "network_port": null,
+        "port": 4807,
+        "status": "Online"
+    },
+    "GSOM": {
+        "network_port": 4811,
+        "port": 4801,
+        "status": "Online"
+    },
+    "GSOX": {
+        "network_port": 4813,
+        "port": 4803,
+        "status": "Online"
+    },
+    "GSP2": {
+        "network_port": null,
+        "port": 4804,
+        "status": "Online"
+    },
+    "GSPC": {
+        "network_port": null,
+        "port": 4802,
+        "status": "Online"
+    },
+    "GSPE": {
+        "network_port": null,
+        "port": 4809,
+        "status": "Online"
+    },
+    "GSPK": {
+        "network_port": null,
+        "port": 4809,
+        "status": "Online"
+    },
+    "GSPL": {
+        "network_port": null,
+        "port": 4809,
+        "status": "Online"
+    },
+    "GSPM": {
+        "network_port": null,
+        "port": 4806,
+        "status": "Online"
+    },
+    "GSPN": {
+        "network_port": null,
+        "port": 4804,
+        "status": "Online"
+    },
+    "GSPO": {
+        "network_port": null,
+        "port": 4809,
+        "status": "Online"
+    },
+    "GSPP": {
+        "network_port": null,
+        "port": 4807,
+        "status": "Online"
+    },
+    "GSPU": {
+        "network_port": null,
+        "port": 4807,
+        "status": "Online"
+    },
+    "GSQT": {
+        "network_port": 4811,
+        "port": 4801,
+        "status": "Online"
+    },
+    "GSQU": {
+        "network_port": null,
+        "port": 4801,
+        "status": "Online"
+    },
+    "GSRA": {
+        "network_port": 4811,
+        "port": 4801,
+        "status": "Online"
+    },
+    "GSRL": {
+        "network_port": 4813,
+        "port": 4803,
+        "status": "Online"
+    },
+    "GSRO": {
+        "network_port": null,
+        "port": 4807,
+        "status": "Online"
+    },
+    "GSSB": {
+        "network_port": null,
+        "port": 4809,
+        "status": "Online"
+    },
+    "GSTA": {
+        "network_port": 4811,
+        "port": 4801,
+        "status": "Online"
+    },
+    "GSTH": {
+        "network_port": null,
+        "port": 4807,
+        "status": "Online"
+    },
+    "GSTI": {
+        "network_port": 4813,
+        "port": 4803,
+        "status": "Online"
+    },
+    "GSTK": {
+        "network_port": null,
+        "port": 4807,
+        "status": "Online"
+    },
+    "GSTR": {
+        "network_port": null,
+        "port": 4807,
+        "status": "Online"
+    },
+    "GSTU": {
+        "network_port": null,
+        "port": 4807,
+        "status": "Online"
+    },
+    "GSTW": {
+        "network_port": 4811,
+        "port": 4801,
+        "status": "Online"
+    },
+    "GSUH": {
+        "network_port": null,
+        "port": 4804,
+        "status": "Online"
+    },
+    "GSUT": {
+        "network_port": null,
+        "port": 4809,
+        "status": "Online"
+    },
+    "GSWA": {
+        "network_port": 4814,
+        "port": 4804,
+        "status": "Online"
+    },
+    "GSWH": {
+        "network_port": null,
+        "port": 4807,
+        "status": "Online"
+    },
+    "GSWI": {
+        "network_port": null,
+        "port": 4807,
+        "status": "Online"
+    },
+    "GSWR": {
+        "network_port": null,
+        "port": 4809,
+        "status": "Online"
+    },
+    "GSWU": {
+        "network_port": null,
+        "port": 4806,
+        "status": "Online"
+    },
+    "HAAS": {
+        "network_port": null,
+        "port": 4801,
+        "status": "Online"
+    },
+    "HAMT": {
+        "network_port": null,
+        "port": 4807,
+        "status": "Online"
+    },
+    "HANM": {
+        "network_port": null,
+        "port": 4802,
+        "status": "Online"
+    },
+    "HAST": {
+        "network_port": null,
+        "port": 4806,
+        "status": "Online"
+    },
+    "HIKB": {
+        "network_port": null,
+        "port": 4806,
+        "status": "Online"
+    },
+    "HOKI": {
+        "network_port": null,
+        "port": 4802,
+        "status": "Online"
+    },
+    "KAIK": {
+        "network_port": 4812,
+        "port": 4802,
+        "status": "Online"
+    },
+    "KTIA": {
+        "network_port": null,
+        "port": 4809,
+        "status": "Online"
+    },
+    "LEVN": {
+        "network_port": null,
+        "port": 4804,
+        "status": "Online"
+    },
+    "LEXA": {
+        "network_port": null,
+        "port": 4801,
+        "status": "Online"
+    },
+    "LKTA": {
+        "network_port": null,
+        "port": 4802,
+        "status": "Online"
+    },
+    "LY2T": {
+        "network_port": null,
+        "port": 4803,
+        "status": "Online"
+    },
+    "MAHO": {
+        "network_port": null,
+        "port": 4806,
+        "status": "Online"
+    },
+    "MAVL": {
+        "network_port": null,
+        "port": 4801,
+        "status": "Online"
+    },
+    "METH": {
+        "network_port": 4813,
+        "port": 4802,
+        "status": "Online"
+    },
+    "MQZG": {
+        "network_port": null,
+        "port": 4803,
+        "status": "Online"
+    },
+    "MRBL": {
+        "network_port": 4812,
+        "port": 4802,
+        "status": "Online"
+    },
+    "MTJO": {
+        "network_port": 4811,
+        "port": 4801,
+        "status": "Online"
+    },
+    "NLSN": {
+        "network_port": 4812,
+        "port": 4802,
+        "status": "Online"
+    },
+    "NPLY": {
+        "network_port": null,
+        "port": 4806,
+        "status": "Online"
+    },
+    "NSFT": {
+        "network_port": null,
+        "port": 4802,
+        "status": "Online"
+    },
+    "OUSD": {
+        "network_port": 4811,
+        "port": 4801,
+        "status": "Online"
+    },
+    "PAEK": {
+        "network_port": null,
+        "port": 4804,
+        "status": "Online"
+    },
+    "PYGR": {
+        "network_port": null,
+        "port": 4801,
+        "status": "Online"
+    },
+    "RGAR": {
+        "network_port": null,
+        "port": 4806,
+        "status": "Online"
+    },
+    "RGUT": {
+        "network_port": null,
+        "port": 4807,
+        "status": "Online"
+    },
+    "TAUP": {
+        "network_port": null,
+        "port": 4806,
+        "status": "Online"
+    },
+    "TBWT": {
+        "network_port": null,
+        "port": 4806,
+        "status": "Online"
+    },
+    "TKHL": {
+        "network_port": 4812,
+        "port": 4802,
+        "status": "Online"
+    },
+    "TRNG": {
+        "network_port": null,
+        "port": 4807,
+        "status": "Online"
+    },
+    "TRWH": {
+        "network_port": 4814,
+        "port": 4804,
+        "status": "Online"
+    },
+    "VGMT": {
+        "network_port": null,
+        "port": 4806,
+        "status": "Online"
+    },
+    "VRSS": {
+        "network_port": 4810,
+        "port": null,
+        "status": "Online"
+    },
+    "WAIM": {
+        "network_port": 4811,
+        "port": 4801,
+        "status": "Online"
+    },
+    "WANG": {
+        "network_port": null,
+        "port": 4806,
+        "status": "Online"
+    },
+    "WARK": {
+        "network_port": null,
+        "port": 4809,
+        "status": "Online"
+    },
+    "WEST": {
+        "network_port": null,
+        "port": 4802,
+        "status": "Online"
+    },
+    "WGTN": {
+        "network_port": 4814,
+        "port": 4804,
+        "status": "Online"
+    },
+    "WGTT": {
+        "network_port": null,
+        "port": 4804,
+        "status": "Online"
+    },
+    "WHKT": {
+        "network_port": null,
+        "port": 4806,
+        "status": "Online"
+    },
+    "WHNG": {
+        "network_port": null,
+        "port": 4809,
+        "status": "Online"
+    },
+    "WRAU": {
+        "network_port": 4812,
+        "port": 4802,
+        "status": "Online"
+    },
+    "WRPA": {
+        "network_port": 4814,
+        "port": 4804,
+        "status": "Online"
+    },
+    "YALD": {
+        "network_port": null,
+        "port": 4803,
+        "status": "Online"
+    }
+}

@@ -1,0 +1,546 @@
+{
+    "2406": {
+        "port": 4807,
+        "status": "Online"
+    },
+    "ARTA": {
+        "port": 4807,
+        "status": "Online"
+    },
+    "AUCK": {
+        "port": 4809,
+        "status": "Online"
+    },
+    "AUKT": {
+        "port": 4809,
+        "status": "Online"
+    },
+    "AUTO": {
+        "port": 4815,
+        "status": "Online"
+    },
+    "AVLN": {
+        "port": 4804,
+        "status": "Online"
+    },
+    "BLUF": {
+        "port": 4801,
+        "status": "Online"
+    },
+    "BTHL": {
+        "port": 4804,
+        "status": "Online"
+    },
+    "CHTI": {
+        "port": 4803,
+        "status": "Online"
+    },
+    "CLRR": {
+        "port": 4802,
+        "status": "Online"
+    },
+    "CMBL": {
+        "port": 4802,
+        "status": "Online"
+    },
+    "CORM": {
+        "port": 4809,
+        "status": "Online"
+    },
+    "DNVK": {
+        "port": 4806,
+        "status": "Online"
+    },
+    "DUND": {
+        "port": 4801,
+        "status": "Online"
+    },
+    "DUNT": {
+        "port": 4801,
+        "status": "Online"
+    },
+    "GISB": {
+        "port": 4806,
+        "status": "Online"
+    },
+    "GLDB": {
+        "port": 4802,
+        "status": "Online"
+    },
+    "GSAA": {
+        "port": 4809,
+        "status": "Online"
+    },
+    "GSAB": {
+        "port": 4803,
+        "status": "Online"
+    },
+    "GSAM": {
+        "port": 4803,
+        "status": "Online"
+    },
+    "GSAY": {
+        "port": 4809,
+        "status": "Online"
+    },
+    "GSBA": {
+        "port": 4801,
+        "status": "Online"
+    },
+    "GSBD": {
+        "port": 4809,
+        "status": "Online"
+    },
+    "GSBF": {
+        "port": 4803,
+        "status": "Online"
+    },
+    "GSBN": {
+        "port": 4802,
+        "status": "Online"
+    },
+    "GSBR": {
+        "port": 4803,
+        "status": "Online"
+    },
+    "GSCA": {
+        "port": 4807,
+        "status": "Online"
+    },
+    "GSCC": {
+        "port": 4803,
+        "status": "Online"
+    },
+    "GSCL": {
+        "port": 4809,
+        "status": "Online"
+    },
+    "GSCM": {
+        "port": 4801,
+        "status": "Online"
+    },
+    "GSCT": {
+        "port": 4803,
+        "status": "Online"
+    },
+    "GSDA": {
+        "port": 4803,
+        "status": "Online"
+    },
+    "GSDR": {
+        "port": 4809,
+        "status": "Online"
+    },
+    "GSGL": {
+        "port": 4809,
+        "status": "Online"
+    },
+    "GSGR": {
+        "port": 4801,
+        "status": "Online"
+    },
+    "GSGx": {
+        "port": null,
+        "status": "Offline"
+    },
+    "GSHO": {
+        "port": 4807,
+        "status": "Online"
+    },
+    "GSHT": {
+        "port": 4807,
+        "status": "Online"
+    },
+    "GSHU": {
+        "port": 4809,
+        "status": "Online"
+    },
+    "GSHW": {
+        "port": 4806,
+        "status": "Online"
+    },
+    "GSIN": {
+        "port": 4801,
+        "status": "Online"
+    },
+    "GSKA": {
+        "port": 4803,
+        "status": "Online"
+    },
+    "GSKK": {
+        "port": 4809,
+        "status": "Online"
+    },
+    "GSLE": {
+        "port": 4803,
+        "status": "Online"
+    },
+    "GSLI": {
+        "port": 4803,
+        "status": "Online"
+    },
+    "GSLW": {
+        "port": 4801,
+        "status": "Online"
+    },
+    "GSLX": {
+        "port": 4801,
+        "status": "Online"
+    },
+    "GSM2": {
+        "port": 4801,
+        "status": "Online"
+    },
+    "GSMA": {
+        "port": 4807,
+        "status": "Online"
+    },
+    "GSMD": {
+        "port": 4809,
+        "status": "Online"
+    },
+    "GSMG": {
+        "port": null,
+        "status": "Offline"
+    },
+    "GSMH": {
+        "port": 4809,
+        "status": "Online"
+    },
+    "GSMO": {
+        "port": 4807,
+        "status": "Online"
+    },
+    "GSNA": {
+        "port": 4806,
+        "status": "Online"
+    },
+    "GSNE": {
+        "port": 4802,
+        "status": "Online"
+    },
+    "GSNP": {
+        "port": 4806,
+        "status": "Online"
+    },
+    "GSOK": {
+        "port": 4807,
+        "status": "Online"
+    },
+    "GSOM": {
+        "port": 4801,
+        "status": "Online"
+    },
+    "GSOX": {
+        "port": 4803,
+        "status": "Online"
+    },
+    "GSP2": {
+        "port": 4804,
+        "status": "Online"
+    },
+    "GSPC": {
+        "port": 4802,
+        "status": "Online"
+    },
+    "GSPE": {
+        "port": 4809,
+        "status": "Online"
+    },
+    "GSPK": {
+        "port": 4809,
+        "status": "Online"
+    },
+    "GSPL": {
+        "port": 4809,
+        "status": "Online"
+    },
+    "GSPM": {
+        "port": 4806,
+        "status": "Online"
+    },
+    "GSPN": {
+        "port": 4806,
+        "status": "Online"
+    },
+    "GSPO": {
+        "port": 4809,
+        "status": "Online"
+    },
+    "GSPP": {
+        "port": 4807,
+        "status": "Online"
+    },
+    "GSPU": {
+        "port": 4807,
+        "status": "Online"
+    },
+    "GSQT": {
+        "port": 4801,
+        "status": "Online"
+    },
+    "GSQU": {
+        "port": 4801,
+        "status": "Online"
+    },
+    "GSRA": {
+        "port": 4801,
+        "status": "Online"
+    },
+    "GSRL": {
+        "port": 4803,
+        "status": "Online"
+    },
+    "GSRO": {
+        "port": 4807,
+        "status": "Online"
+    },
+    "GSSB": {
+        "port": 4809,
+        "status": "Online"
+    },
+    "GSTA": {
+        "port": 4801,
+        "status": "Online"
+    },
+    "GSTH": {
+        "port": 4809,
+        "status": "Online"
+    },
+    "GSTI": {
+        "port": 4803,
+        "status": "Online"
+    },
+    "GSTK": {
+        "port": 4809,
+        "status": "Online"
+    },
+    "GSTR": {
+        "port": 4807,
+        "status": "Online"
+    },
+    "GSTU": {
+        "port": 4807,
+        "status": "Online"
+    },
+    "GSTW": {
+        "port": 4801,
+        "status": "Online"
+    },
+    "GSUH": {
+        "port": 4804,
+        "status": "Online"
+    },
+    "GSUT": {
+        "port": 4809,
+        "status": "Online"
+    },
+    "GSWA": {
+        "port": 4804,
+        "status": "Online"
+    },
+    "GSWH": {
+        "port": 4807,
+        "status": "Online"
+    },
+    "GSWI": {
+        "port": 4809,
+        "status": "Online"
+    },
+    "GSWR": {
+        "port": 4809,
+        "status": "Online"
+    },
+    "GSWU": {
+        "port": 4806,
+        "status": "Online"
+    },
+    "HAAS": {
+        "port": 4802,
+        "status": "Online"
+    },
+    "HAMT": {
+        "port": 4807,
+        "status": "Online"
+    },
+    "HANM": {
+        "port": 4803,
+        "status": "Online"
+    },
+    "HAST": {
+        "port": 4806,
+        "status": "Online"
+    },
+    "HIKB": {
+        "port": 4806,
+        "status": "Online"
+    },
+    "HOKI": {
+        "port": 4802,
+        "status": "Online"
+    },
+    "JTGT": {
+        "port": 4802,
+        "status": "Online"
+    },
+    "KAIK": {
+        "port": 4802,
+        "status": "Online"
+    },
+    "KTIA": {
+        "port": 4809,
+        "status": "Online"
+    },
+    "LEVN": {
+        "port": 4804,
+        "status": "Online"
+    },
+    "LEXA": {
+        "port": 4801,
+        "status": "Online"
+    },
+    "LKTA": {
+        "port": 4803,
+        "status": "Online"
+    },
+    "LY2T": {
+        "port": 4803,
+        "status": "Online"
+    },
+    "MAHO": {
+        "port": 4807,
+        "status": "Online"
+    },
+    "MAVL": {
+        "port": 4801,
+        "status": "Online"
+    },
+    "METH": {
+        "port": 4803,
+        "status": "Online"
+    },
+    "MQZG": {
+        "port": 4803,
+        "status": "Online"
+    },
+    "MRBL": {
+        "port": 4803,
+        "status": "Online"
+    },
+    "MTJO": {
+        "port": 4803,
+        "status": "Online"
+    },
+    "NLSN": {
+        "port": 4802,
+        "status": "Online"
+    },
+    "NPLY": {
+        "port": 4806,
+        "status": "Online"
+    },
+    "NSFT": {
+        "port": 4802,
+        "status": "Online"
+    },
+    "NTGT": {
+        "port": 4806,
+        "status": "Online"
+    },
+    "OUSD": {
+        "port": 4801,
+        "status": "Online"
+    },
+    "PAEK": {
+        "port": 4804,
+        "status": "Online"
+    },
+    "PYGR": {
+        "port": 4801,
+        "status": "Online"
+    },
+    "RGAR": {
+        "port": 4807,
+        "status": "Online"
+    },
+    "RGUT": {
+        "port": 4807,
+        "status": "Online"
+    },
+    "TAUP": {
+        "port": 4807,
+        "status": "Online"
+    },
+    "TBWT": {
+        "port": 4806,
+        "status": "Online"
+    },
+    "TKHL": {
+        "port": 4802,
+        "status": "Online"
+    },
+    "TRNG": {
+        "port": 4807,
+        "status": "Online"
+    },
+    "TRWH": {
+        "port": 4804,
+        "status": "Online"
+    },
+    "VGMT": {
+        "port": 4806,
+        "status": "Online"
+    },
+    "VRSS": {
+        "port": 4800,
+        "status": "Online"
+    },
+    "WAIM": {
+        "port": 4803,
+        "status": "Online"
+    },
+    "WANG": {
+        "port": 4806,
+        "status": "Online"
+    },
+    "WARK": {
+        "port": 4809,
+        "status": "Online"
+    },
+    "WEST": {
+        "port": 4802,
+        "status": "Online"
+    },
+    "WGTN": {
+        "port": 4804,
+        "status": "Online"
+    },
+    "WGTT": {
+        "port": 4804,
+        "status": "Online"
+    },
+    "WHKT": {
+        "port": 4807,
+        "status": "Online"
+    },
+    "WHNG": {
+        "port": 4809,
+        "status": "Online"
+    },
+    "WRAU": {
+        "port": 4802,
+        "status": "Online"
+    },
+    "WRPA": {
+        "port": 4804,
+        "status": "Online"
+    },
+    "YALD": {
+        "port": 4803,
+        "status": "Online"
+    },
+    "xGRX": {
+        "port": null,
+        "status": "Offline"
+    }
+}

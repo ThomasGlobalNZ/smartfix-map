@@ -1,0 +1,49 @@
+QA PORT ASSIGNMENT & STATUS REPORT
+========================================
+
+PORT 4801 (23 stations):
+BLUF (Online), DUND (Online), DUNT (Online), GSBA (Online), GSCM (Online)
+GSGR (Online), GSIN (Online), GSLW (Online), GSLX (Online), GSM2 (Online)
+GSOM (Online), GSQT (Online), GSQU (Online), GSRA (Online), GSTA (Online)
+GSTW (Online), HAAS (Online), LEXA (Online), MAVL (Online), MTJO (Online)
+OUSD (Online), PYGR (Online), WAIM (Online)
+
+PORT 4802 (18 stations):
+CLRR (Online), CMBL (Online), GLDB (Online), GSBN (Online), GSCT (Online)
+GSNE (Online), GSPC (Online), HANM (Online), HOKI (Online), KAIK (Online)
+LKTA (Online), METH (Online), MRBL (Online), NLSN (Online), NSFT (Online)
+TKHL (Online), WEST (Online), WRAU (Online)
+
+PORT 4803 (16 stations):
+CHTI (Online), GSAB (Online), GSAM (Online), GSBF (Online), GSBR (Online)
+GSCC (Online), GSDA (Online), GSKA (Online), GSLE (Online), GSLI (Online)
+GSOX (Online), GSRL (Online), GSTI (Online), LY2T (Online), MQZG (Online)
+YALD (Online)
+
+PORT 4804 (13 stations):
+AVLN (Online), BTHL (Online), DNVK (Online), GSP2 (Online), GSPN (Online)
+GSUH (Online), GSWA (Online), LEVN (Online), PAEK (Online), TRWH (Online)
+WGTN (Online), WGTT (Online), WRPA (Online)
+
+PORT 4806 (16 stations):
+GISB (Online), GSHW (Online), GSNA (Online), GSNP (Online), GSPM (Online)
+GSWU (Online), HAST (Online), HIKB (Online), MAHO (Online), NPLY (Online)
+RGAR (Online), TAUP (Online), TBWT (Online), VGMT (Online), WANG (Online)
+WHKT (Online)
+
+PORT 4807 (21 stations):
+2406 (Online), ARTA (Online), CORM (Online), GSCA (Online), GSHO (Online)
+GSHT (Online), GSMA (Online), GSMO (Online), GSOK (Online), GSPP (Online)
+GSPU (Online), GSRO (Online), GSTH (Online), GSTK (Online), GSTR (Online)
+GSTU (Online), GSWH (Online), GSWI (Online), HAMT (Online), RGUT (Online)
+TRNG (Online)
+
+PORT 4809 (22 stations):
+AUCK (Online), AUKT (Online), GSAA (Online), GSAY (Online), GSBD (Online)
+GSCL (Online), GSDR (Online), GSGL (Online), GSHU (Online), GSKK (Online)
+GSMD (Online), GSMH (Online), GSPE (Online), GSPK (Online), GSPL (Online)
+GSPO (Online), GSSB (Online), GSUT (Online), GSWR (Online), KTIA (Online)
+WARK (Online), WHNG (Online)
+
+OFFLINE STATIONS (1):
+GSGx

@@ -1,0 +1,16 @@
+QUESTIONS FOR IT ADMIN
+======================
+
+Please ask the IT administrator the following questions to ensure the map is deployed correctly:
+
+1. WHAT IS THE URL?
+   - What will be the final web address for the map?
+   - Example: https://globalsurvey.co.nz/smartfix
+
+2. IS HTTPS ENABLED?
+   - Does the server support HTTPS?
+   - This is important for the "Find My Location" (GPS) feature to work on mobile devices.
+
+3. HOW DO I UPDATE DATA?
+   - If I generate new station data files in the future, how should I send them to you?
+   - Can I email them, or is there a specific folder/FTP I should upload to?

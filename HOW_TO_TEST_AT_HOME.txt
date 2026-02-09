@@ -1,0 +1,23 @@
+# How to Test at Home
+
+1. **Unzip** the `SBC_WebMap_v17.zip` file to a folder (e.g., on your Desktop).
+2. **Open** that folder.
+
+## Testing on PC
+*   Double-click `run_map.bat`.
+*   It will open the map in your default browser.
+
+## Testing on Mobile (WiFi)
+1.  Make sure your PC and Phone are on the **same WiFi**.
+2.  Double-click `run_map_https.bat`.
+    *   It may ask to install a library (`cryptography`) - let it do so.
+    *   **Firewall:** If Windows Firewall pops up, click **"Allow Access"** (Private Networks).
+3.  The text window will show an address like:
+    `Network: https://192.168.1.15:8443`
+4.  **On your Phone:**
+    *   Open Chrome or Safari.
+    *   Type that exact address (including the `https://` and `:8443`).
+    *   **Warning:** You will see a "Not Secure" or "Connection is not private" warning.
+        *   **Chrome:** Click "Advanced" -> "Proceed to...".
+        *   **Safari:** Click "Show Details" -> "visit this website".
+5.  The map should load! Click the "Locate Me" button to see your GPS position.

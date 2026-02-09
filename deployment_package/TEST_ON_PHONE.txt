@@ -1,0 +1,28 @@
+HOW TO TEST ON YOUR PHONE (LOCAL WIFI)
+======================================
+
+1. ENSURE CONNECTION
+   Make sure your phone and this PC are on the same Wi-Fi network.
+
+2. FIND YOUR PC's IP ADDRESS
+   - On this PC, open a terminal (Command Prompt).
+   - Type `ipconfig` and press Enter.
+   - Look for "IPv4 Address" (e.g., 192.168.1.50).
+
+3. OPEN ON PHONE
+   - On your phone's browser (Chrome/Safari), type:
+     http://YOUR_IP_ADDRESS:8000/app/index.html
+     
+     Example: http://192.168.1.50:8000/app/index.html
+
+4. VERIFY MOBILE LAYOUT
+   - Check that the controls (search box, buttons) fit on the screen.
+   - Check that the "Coordinate Box" moves to the bottom and looks good.
+   - Try using two fingers to pinch/zoom the map.
+
+TROUBLESHOOTING
+--------------
+*   **Can't Load?** It is likely the Windows Firewall blocking the connection.
+    1.  On your PC, a popup might have appeared asking to allow Python. Click "Allow/Public".
+    2.  If no popup: Search Windows for "Firewall & network protection" -> "Allow an app through firewall" -> Ensure `python.exe` is checked for Private/Public.
+*   **Different WiFi?** Your phone and laptop MUST be on the same Wireless network. If your laptop is on a cable (Ethernet) and phone is on WiFi, it might not work depending on the router setting.

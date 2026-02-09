@@ -1,0 +1,4 @@
+requests
+pyrtcm
+geopandas
+shapely

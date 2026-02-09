@@ -1,0 +1,28 @@
+SMARTFIX MAP - TESTING CHECKLIST
+================================
+
+Open the map in your browser and check these 5 things:
+
+1. CHECK THE MAP LOADS
+   - Do you see the map of New Zealand?
+   - Do you see blue and green dots (stations)?
+
+2. CHECK THE LAYERS (Top Left Icon)
+   - Click the layer icon (square stack).
+   - Click "Satellite". Does the background become an aerial photo?
+   - Switch back to "Standard".
+
+3. CHECK A STATION
+   - Click any colored dot.
+   - A box should pop up with the Station Name and Port Number.
+   - It should also show the "Est. Baseline Error".
+
+4. TEST THE TOOLS (Top Right Buttons)
+   - Click the "Ruler" icon. Click two points on the map. It should measure distance.
+   - Click the "Target" icon. Enter "20". It should draw green rings around all stations.
+
+5. CHECK COORDINATES (Bottom Left)
+   - Move your mouse. The numbers in the bottom-left corner should change.
+   - Click the numbers to switch between Lat/Lon and NZTM.
+
+If all of these work, the deployment is successful.
