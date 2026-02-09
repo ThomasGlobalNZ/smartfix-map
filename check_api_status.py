@@ -10,8 +10,8 @@ from datetime import datetime
 # Configuration
 BASE_URL = "https://smartfix.co.nz/SBC/API/v12.0" 
 # Use Environment Variables with fallback to provided defaults
-USERNAME = os.environ.get("SMARTFIX_USER", "Admin")
-PASSWORD = os.environ.get("SMARTFIX_PASSWORD", "Surv3y")
+USERNAME = os.environ.get("SMARTFIX_USER") or "Admin"
+PASSWORD = os.environ.get("SMARTFIX_PASSWORD") or "Surv3y"
 
 META_FILE = "app/data/station_meta.json"
 QA_FILE = "app/data/QA_Port_Assignments.txt"
