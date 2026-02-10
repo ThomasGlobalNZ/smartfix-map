@@ -167,7 +167,7 @@ const portColors = {
     4807: '#e67e22', // Waikato/BoP - Orange
     4806: '#2ecc71', // Central North Island - Green (Brighter)
     4804: '#e74c3c', // Wellington - Red
-    4802: '#1abc9c', // Nelson/Marlborough - Teal
+    4802: '#3498db', // Nelson/Marlborough - Blue
     4803: '#e91e63', // Canterbury - Pink (Distinct from Teal/Blue)
     4801: '#f1c40f'  // Otago/Southland - Yellow
 };
@@ -852,6 +852,7 @@ map.on('locationfound', function (e) {
         content += `<hr style="margin: 5px 0; border: 0; border-top: 1px solid #ccc;">
        <span style="color: blue; font-weight: bold;">Nearest Station</span><br>
         <b>${nearestInfo.code}</b><br>
+        Location: <b>${nearestInfo.location}</b><br>
         Port: <b>${nearestInfo.port}</b> (Single)${netPortText}${circuitText}<br>
         Distance: ${nearestInfo.distance} km`;
     }
@@ -1145,8 +1146,12 @@ function findNearestStation(lat, lon, returnInfo = false) {
 
         if (returnInfo) {
             const code = props['Site Code'] ? props['Site Code'].toString().trim().toUpperCase() : '';
+            const locName = (typeof stationLocations !== 'undefined' && stationLocations[code])
+                ? stationLocations[code]
+                : (props['Site Name'] || 'Unknown');
             return {
                 name: props['Site Name'],
+                location: locName,
                 code: code,
                 port: props.assignedPort,
                 distance: distKm

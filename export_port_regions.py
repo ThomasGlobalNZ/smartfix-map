@@ -15,7 +15,7 @@ PORT_COLORS = {
     4804: '#e74c3c', # Wellington - Red (New)
 
     # South Island
-    4802: '#1abc9c', # Nelson/Marlborough - Teal (New)
+    4802: '#3498db', # Nelson/Marlborough - Blue (New: Distinct from Green)
     4803: '#e91e63', # Canterbury - Pink (Distinct)
     4801: '#f1c40f'  # Otago/Southland - Yellow
 }
@@ -108,8 +108,11 @@ STATIC_PORTS = {
 # Merge: JSON overrides Static
 SPECIFIC_PORTS = STATIC_PORTS.copy()
 SPECIFIC_PORTS.update(MAPPED_PORTS)
-SPECIFIC_PORTS['GHOST_WEST'] = 4802  # Force Ghost Station to 4802
-SPECIFIC_PORTS['GHOST_KOAMARU'] = 4802 # Force Cape Koamaru to Nelson
+# Force Overrides (Post-JSON Load)
+SPECIFIC_PORTS['GHOST_WEST'] = 4802
+SPECIFIC_PORTS['GHOST_KOAMARU'] = 4802
+SPECIFIC_PORTS['METH'] = 4803
+SPECIFIC_PORTS['GSCT'] = 4803
 
 # File Paths
 DATA_DIR = "app/data"
