@@ -10,13 +10,13 @@ import json
 PORT_COLORS = {
     # North Island
     4809: '#9b59b6', # Auckland/Northland - Purple
-    4807: '#e67e22', # Waikato/BoP - Orange/Brown
-    4806: '#27ae60', # Central North Island - Green
-    4804: '#2980b9', # Wellington - Blue
+    4807: '#e67e22', # Waikato/BoP - Orange
+    4806: '#2ecc71', # Central North Island - Green (Brighter)
+    4804: '#e74c3c', # Wellington - Red (New)
 
     # South Island
-    4802: '#8e44ad', # Nelson/Marlborough - Purple (Darker)
-    4803: '#3498db', # Canterbury - Blue (Lighter)
+    4802: '#1abc9c', # Nelson/Marlborough - Teal (New)
+    4803: '#3498db', # Canterbury - Blue
     4801: '#f1c40f'  # Otago/Southland - Yellow
 }
 
