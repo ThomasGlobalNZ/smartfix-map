@@ -9,6 +9,10 @@ if exist ".git\index.lock" (
     echo Removing stale git lock file...
     del ".git\index.lock"
 )
+if exist ".git\rebase-merge" (
+    echo Removing stale rebase directory...
+    rmdir /s /q ".git\rebase-merge"
+)
 
 echo 1. Regenerating Port Regions...
 python export_port_regions.py
