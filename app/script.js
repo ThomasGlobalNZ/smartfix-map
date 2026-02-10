@@ -331,16 +331,40 @@ Promise.all([
                         title: `Mountpoint: ${code} (${status})`
                     });
 
-                    // Popup
-                    // FIX: Use strict check from metadata
-                    const networkPort = (metaData[code] && metaData[code].network_port) ? metaData[code].network_port : 'No';
-                    const lastSeen = (metaData[code] && metaData[code].last_seen) ? metaData[code].last_seen : 'Unknown';
-                    const regionName = portNames[port] || 'Unknown';
+                    // Location Mapping
+                    const stationLocations = {
+                        // North Island
+                        'KTIA': 'Kaitaia', 'GSKK': 'Kerikeri', 'GSWR': 'Whangarei CBD', 'WHNG': 'Whangarei',
+                        'GSDR': 'Dargaville', 'GSMH': 'Mangawhai Heads', 'WARK': 'Warkworth', 'GSSB': 'Shelly Beach',
+                        'AUCK': 'Whangaparaoa', 'GSAL': 'Albany', 'CORM': 'Coromandel', 'GSUT': 'Waterview',
+                        'GSBL': 'Beachlands', 'GSAA': 'Auckland Airport', 'GSTN': 'Takanini', 'GSTH': 'Thames',
+                        'GSWI': 'Waiuku', 'GSWH': 'Waihi', 'GSTK': 'Te Kauwhata', 'HIKB': 'Hicks Bay',
+                        'TRNG': 'Papamoa', 'GSHT': 'Hamilton CBD', 'HAMT': 'Whatawhata', 'GSCA': 'Cambridge',
+                        'WHKT': 'Whakatane', 'GSPU': 'Putaruru', 'GSRO': 'Rotorua', 'MAHO': 'Mahoenui',
+                        'RGAR': 'Broadlands', 'ARTA': 'Aratiatia Dam', 'GISB': 'Patutahi', 'TAUP': 'Taupo',
+                        'NPLY': 'New Plymouth', 'VGMT': 'Ohakune', 'HAST': 'Hastings', 'GSHW': 'Hawera',
+                        'WANG': 'Wanganui', 'DNVK': 'Dannevirke', 'GSPN': 'Palmerston North', 'GSWF': 'Welsford',
+
+                        // South Island
+                        'GLDB': 'Golden Bay', 'TKHL': 'Takaka Hill', 'NLSN': 'Cable Bay', 'GSNE': 'Stoke',
+                        'GSBN': 'Blenheim', 'WRAU': 'Wairau Valley', 'WEST': 'Waimangaroa', 'CMBL': 'Cape Campbell',
+                        'GSCR': 'Clarence', 'KAIK': 'Kaikoura', 'HANM': 'Hanmer Springs', 'MRBL': 'Marble Point',
+                        'HOKI': 'Hokitika', 'LKTA': 'Lake Taylor', 'GSCT': 'Cheviot', 'GSAM': 'Amberley',
+                        'GSOX': 'Oxford', 'GSJV': 'Mairehau', 'YALD': 'Yaldhurst', 'GSCC': 'Christchurch City',
+                        'METH': 'Methven', 'MQZG': 'McQueens Valley', 'GSLI': 'Little River', 'GSAB': 'Ashburton',
+                        'MTJO': 'Mount John', 'HAAS': 'Haast', 'GSTW': 'Twizel', 'GSTI': 'Timaru',
+                        'WAIM': 'Waimate', 'GSLW': 'Wanaka', 'GSQU': 'Queenstown', 'GSOM': 'Oamaru',
+                        'LEXA': 'Alexandra', 'MALV': 'Mavora Lakes', 'DUND': 'Dunedin', 'GSGR': 'Gore',
+                        'GSRA': 'Ranfurly', 'SCTB': 'Scott Base', 'CHTI': 'Chatham Islands', 'BLUF': 'Bluff'
+                    };
+
+                    const locationName = stationLocations[code] || props['Site Name'] || 'Unknown';
 
                     const popupContent = `
                         <div style="font-family: Roboto, sans-serif; font-size: 13px;">
                             <b style="font-size: 14px;">${code}</b><br>
                             Status: <b style="color: ${isOffline ? 'red' : 'green'}">${status}</b><br>
+                            Location: <b>${locationName}</b><br>
                             Single Site Port: <b>${port}</b><br>
                             Network Port: <b>${networkPort}</b><br>
                             Region: ${regionName}
