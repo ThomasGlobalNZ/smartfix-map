@@ -16,7 +16,7 @@ PORT_COLORS = {
 
     # South Island
     4802: '#1abc9c', # Nelson/Marlborough - Teal (New)
-    4803: '#3498db', # Canterbury - Blue
+    4803: '#e91e63', # Canterbury - Pink (Distinct)
     4801: '#f1c40f'  # Otago/Southland - Yellow
 }
 
