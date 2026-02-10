@@ -360,6 +360,10 @@ Promise.all([
 
                     const locationName = stationLocations[code] || props['Site Name'] || 'Unknown';
 
+                    // Restore missing definitions
+                    const networkPort = (metaData[code] && metaData[code].network_port) ? metaData[code].network_port : 'No';
+                    const regionName = portNames[port] || 'Unknown';
+
                     const popupContent = `
                         <div style="font-family: Roboto, sans-serif; font-size: 13px;">
                             <b style="font-size: 14px;">${code}</b><br>
