@@ -11,12 +11,12 @@ PORT_COLORS = {
     # North Island
     4809: '#9b59b6', # Auckland/Northland - Purple
     4807: '#e67e22', # Waikato/BoP - Orange
-    4806: '#2ecc71', # Central North Island - Green (Brighter)
-    4804: '#e74c3c', # Wellington - Red (New)
+    4806: '#3498db', # Central North Island - Blue (New: Was Green)
+    4804: '#e74c3c', # Wellington - Red
 
     # South Island
-    4802: '#3498db', # Nelson/Marlborough - Blue (New: Distinct from Green)
-    4803: '#e91e63', # Canterbury - Pink (Distinct)
+    4802: '#d35400', # Nelson/Marlborough - Dark Orange/Red (Distinct from 4804)
+    4803: '#2ecc71', # Canterbury - Green (Was Pink/Blue)
     4801: '#f1c40f'  # Otago/Southland - Yellow
 }
 
@@ -113,6 +113,10 @@ SPECIFIC_PORTS['GHOST_WEST'] = 4802
 SPECIFIC_PORTS['GHOST_KOAMARU'] = 4802
 SPECIFIC_PORTS['METH'] = 4803
 SPECIFIC_PORTS['GSCT'] = 4803
+SPECIFIC_PORTS['WAIM'] = 4803
+SPECIFIC_PORTS['LKTA'] = 4803
+SPECIFIC_PORTS['MRBL'] = 4803
+SPECIFIC_PORTS['HANM'] = 4803
 
 # File Paths
 DATA_DIR = "app/data"

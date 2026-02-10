@@ -165,10 +165,10 @@ const cb = new Date().getTime();
 const portColors = {
     4809: '#9b59b6', // Auckland/Northland - Purple
     4807: '#e67e22', // Waikato/BoP - Orange
-    4806: '#2ecc71', // Central North Island - Green (Brighter)
+    4806: '#3498db', // Central North Island - Blue
     4804: '#e74c3c', // Wellington - Red
-    4802: '#3498db', // Nelson/Marlborough - Blue
-    4803: '#e91e63', // Canterbury - Pink (Distinct from Teal/Blue)
+    4802: '#d35400', // Nelson/Marlborough - Dark Orange/Red
+    4803: '#2ecc71', // Canterbury - Green
     4801: '#f1c40f'  // Otago/Southland - Yellow
 };
 
