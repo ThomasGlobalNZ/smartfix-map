@@ -109,6 +109,7 @@ STATIC_PORTS = {
 SPECIFIC_PORTS = STATIC_PORTS.copy()
 SPECIFIC_PORTS.update(MAPPED_PORTS)
 SPECIFIC_PORTS['GHOST_WEST'] = 4802  # Force Ghost Station to 4802
+SPECIFIC_PORTS['GHOST_KOAMARU'] = 4802 # Force Cape Koamaru to Nelson
 
 # File Paths
 DATA_DIR = "app/data"
@@ -169,7 +170,10 @@ def main():
     print("Adding Ghost Stations for boundary definition...")
     GHOST_STATIONS = [
         # "Between Haas and Hoki" - approx Westland/Main Divide
-        {'Site Code': 'GHOST_WEST', 'geometry': Point(170.0, -43.3), 'port': 4802} 
+        {'Site Code': 'GHOST_WEST', 'geometry': Point(170.0, -43.3), 'port': 4802},
+        # Cook Strait Fix: Cape Koamaru (Marlborough Sounds Tip) -> Nelson (4802)
+        # Pushes Wellington (Red) back to North Island
+        {'Site Code': 'GHOST_KOAMARU', 'geometry': Point(174.383, -41.116), 'port': 4802}
     ]
     
     ghosts_gdf = gpd.GeoDataFrame(GHOST_STATIONS, crs="EPSG:4326")
