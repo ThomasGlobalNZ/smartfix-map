@@ -167,7 +167,7 @@ const portColors = {
     4807: '#e67e22', // Waikato/BoP - Orange
     4806: '#3498db', // Central North Island - Blue
     4804: '#e74c3c', // Wellington - Red
-    4802: '#d35400', // Nelson/Marlborough - Dark Orange/Red
+    4802: '#e91e63', // Nelson/Marlborough - Pink
     4803: '#2ecc71', // Canterbury - Green
     4801: '#f1c40f'  // Otago/Southland - Yellow
 };
@@ -210,7 +210,8 @@ const stationLocations = {
     'MTJO': 'Mount John', 'HAAS': 'Haast', 'GSTW': 'Twizel', 'GSTI': 'Timaru',
     'WAIM': 'Waimate', 'GSLW': 'Wanaka', 'GSQU': 'Queenstown', 'GSOM': 'Oamaru',
     'LEXA': 'Alexandra', 'MALV': 'Mavora Lakes', 'DUND': 'Dunedin', 'GSGR': 'Gore',
-    'GSRA': 'Ranfurly', 'SCTB': 'Scott Base', 'CHTI': 'Chatham Islands', 'BLUF': 'Bluff'
+    'GSRA': 'Ranfurly', 'SCTB': 'Scott Base', 'CHTI': 'Chatham Islands', 'BLUF': 'Bluff',
+    'GSLE': 'Leeston', 'GSDA': 'Darfield'
 };
 
 Promise.all([
@@ -851,8 +852,7 @@ map.on('locationfound', function (e) {
 
         content += `<hr style="margin: 5px 0; border: 0; border-top: 1px solid #ccc;">
        <span style="color: blue; font-weight: bold;">Nearest Station</span><br>
-        <b>${nearestInfo.code}</b><br>
-        Location: <b>${nearestInfo.location}</b><br>
+        <b>${nearestInfo.code}</b> <span style="font-size: 0.9em; color: #555;">(${nearestInfo.location})</span><br>
         Port: <b>${nearestInfo.port}</b> (Single)${netPortText}${circuitText}<br>
         Distance: ${nearestInfo.distance} km`;
     }
