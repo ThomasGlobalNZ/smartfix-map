@@ -1,4 +1,4 @@
-QA STATION STATUS REPORT (2026-02-10 03:50)
+QA STATION STATUS REPORT (2026-02-10 04:10)
 Source: SmartFix API
 ========================================
 
@@ -40,14 +40,14 @@ GSTU (Online), GSWH (Online), GSWI (Online), HAMT (Online), RGUT (Online)
 TRNG (Online)
 
 PORT 4809 (22 stations):
-AUCK (Online), AUKT (Online), GSAA (Online), GSAY (Online), GSBD (Online)
+AUCK (Online), AUKT (Online), GSAA (Online), GSAY (Offline), GSBD (Online)
 GSCL (Online), GSDR (Online), GSGL (Online), GSHU (Online), GSKK (Online)
 GSMD (Online), GSMH (Online), GSPE (Online), GSPK (Online), GSPL (Online)
 GSPO (Offline), GSSB (Online), GSUT (Online), GSWR (Online), KTIA (Online)
 WARK (Online), WHNG (Online)
 
-OFFLINE STATIONS (10):
-AUTO (Last: 2026-02-10 12:03), GSGx (Last: Never), GSHO (Last: 2026-02-10 12:03)
-GSLE (Last: 2026-02-10 12:03), GSPO (Last: 2026-02-10 12:03), GSPU (Last: 2026-02-10 12:03)
-GSRA (Last: 2026-02-10 12:03), GSRO (Last: 2026-02-10 12:03), PYGR (Last: 2026-02-10 12:03)
-VRSS (Last: 2026-02-10 12:03)
+OFFLINE STATIONS (11):
+AUTO (Last: 2026-02-10 12:03), GSAY (Last: 2026-02-10 03:50), GSGx (Last: Never)
+GSHO (Last: 2026-02-10 12:03), GSLE (Last: 2026-02-10 12:03), GSPO (Last: 2026-02-10 12:03)
+GSPU (Last: 2026-02-10 12:03), GSRA (Last: 2026-02-10 12:03), GSRO (Last: 2026-02-10 12:03)
+PYGR (Last: 2026-02-10 12:03), VRSS (Last: 2026-02-10 12:03)
