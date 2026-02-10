@@ -96,7 +96,7 @@ STATIC_PORTS = {
     
     # 4803: Canterbury
     'LY2T': 4803, 'GSCC': 4803, 'GSTI': 4803, 'ASHB': 4803, 'TIMA': 4803,
-    'TWIZ': 4803, 'FAIR': 4803,
+    'TWIZ': 4803, 'FAIR': 4803, 'METH': 4803, 'GSCT': 4803,
     'GSAB': 4803,
     
     # 4801: Otago / Southland
