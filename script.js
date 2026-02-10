@@ -163,13 +163,13 @@ const cb = new Date().getTime();
 
 // --- Colors ---
 const portColors = {
-    4801: '#ff0000', // Red
-    4802: '#00ff00', // Green
-    4803: '#0000ff', // Blue
-    4804: '#ffa500', // Orange
-    4806: '#800080', // Purple
-    4807: '#00ffff', // Cyan
-    4809: '#ff00ff'  // Magenta
+    4809: '#9b59b6', // Auckland/Northland - Purple
+    4807: '#e67e22', // Waikato/BoP - Orange/Brown
+    4806: '#27ae60', // Central North Island - Green
+    4804: '#2980b9', // Wellington - Blue
+    4802: '#8e44ad', // Nelson/Marlborough - Purple (Darker)
+    4803: '#3498db', // Canterbury - Blue (Lighter)
+    4801: '#f1c40f'  // Otago/Southland - Yellow
 };
 
 const networkPorts = {
@@ -1130,6 +1130,9 @@ function findNearestStation(lat, lon, returnInfo = false) {
 
 // Helper: Determine Authoritative Port for Station
 function getPortForStation(code, lat) {
+    // 0. Specific Overrides (User Request)
+    if (code === 'METH' || code === 'GSCT') return 4803;
+
     // 1. Check Authoritative List
     if (authoritativePorts[code]) {
         return authoritativePorts[code];
