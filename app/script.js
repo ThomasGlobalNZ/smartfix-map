@@ -168,7 +168,7 @@ const portColors = {
     4806: '#27ae60', // Central North Island - Green
     4804: '#2980b9', // Wellington - Blue
     4802: '#8e44ad', // Nelson/Marlborough - Purple (Darker)
-    4803: '#3498db', # Canterbury - Blue(Lighter)
+    4803: '#3498db', // Canterbury - Blue (Lighter)
     4801: '#f1c40f'  // Otago/Southland - Yellow
 };
 
