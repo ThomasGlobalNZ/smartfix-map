@@ -317,11 +317,11 @@ Promise.all([
                     // (Status already determined above)
 
                     // Color Logic
-                    let color = isSmartFix ? '#28a745' : '#007bff';
-                    if (isOffline) color = 'red'; // Red for offline
+                    let color = '#28a745'; // Green for Online (both SmartFix and LINZ)
+                    if (isOffline) color = '#dc3545'; // Red for Offline
 
                     const marker = L.circleMarker([lat, lon], {
-                        radius: 11, // Increased for better mobile touch targets
+                        radius: 8, // Slightly smaller for cleaner look
                         fillColor: color,
                         color: "#fff",
                         weight: 2,
@@ -335,16 +335,16 @@ Promise.all([
                     // FIX: Use strict check from metadata
                     const networkPort = (metaData[code] && metaData[code].network_port) ? metaData[code].network_port : 'No';
                     const lastSeen = (metaData[code] && metaData[code].last_seen) ? metaData[code].last_seen : 'Unknown';
+                    const regionName = portNames[port] || 'Unknown';
 
                     const popupContent = `
-                        <b>${code}</b><br>
-                        Status: <b style="color: ${isOffline ? 'red' : 'green'}">${status}</b><br>
-                        Type: ${type}<br>
-                        Mountpoint: <b>${code}singleADV4</b><br>
-                        Single Site Port: <b>${port}</b><br>
-                        Network Port: <b>${networkPort}</b><br>
-                        Region: ${portNames[port] || 'Unknown'}<br>
-                        <span style="font-size: 11px; color: #666;">Last Seen: ${lastSeen}</span>
+                        <div style="font-family: Roboto, sans-serif; font-size: 13px;">
+                            <b style="font-size: 14px;">${code}</b><br>
+                            Status: <b style="color: ${isOffline ? 'red' : 'green'}">${status}</b><br>
+                            Single Site Port: <b>${port}</b><br>
+                            Network Port: <b>${networkPort}</b><br>
+                            Region: ${regionName}
+                        </div>
                     `;
                     marker.bindPopup(popupContent);
 
@@ -703,8 +703,33 @@ document.getElementById('locate-btn').addEventListener('click', () => {
 });
 
 map.on('locationerror', function (e) {
-    alert("Geolocation Failed.\n\nNote: Browsers often (incorrectly) block location on 'http' connections. Please try using 'https' if possible, or check your browser permissions.");
+    showToast("Geolocation Failed. Check HTTPS or Permissions.", "error");
 });
+
+// Toast Notification Helper
+function showToast(message, type = 'info') {
+    let toast = document.getElementById('toast-notification');
+    if (!toast) {
+        toast = document.createElement('div');
+        toast.id = 'toast-notification';
+        toast.style.cssText = `
+            position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%);
+            background: #333; color: white; padding: 12px 24px; border-radius: 4px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3); z-index: 2000; font-family: Roboto, sans-serif;
+            font-size: 14px; opacity: 0; transition: opacity 0.3s ease;
+        `;
+        document.body.appendChild(toast);
+    }
+
+    if (type === 'error') toast.style.background = '#d32f2f'; // Red
+
+    toast.textContent = message;
+    toast.style.opacity = '1';
+
+    setTimeout(() => {
+        toast.style.opacity = '0';
+    }, 4000);
+}
 
 map.on('locationfound', function (e) {
     // Check if we are still in locate mode? 
