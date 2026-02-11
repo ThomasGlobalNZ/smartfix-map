@@ -177,7 +177,7 @@ def main():
     print("Adding Ghost Stations for boundary definition...")
     GHOST_STATIONS = [
         # "Between Haas and Hoki" - approx Westland/Main Divide
-        {'Site Code': 'GHOST_WEST', 'geometry': Point(170.0, -43.3), 'port': 4802},
+        # {'Site Code': 'GHOST_WEST', 'geometry': Point(170.0, -43.3), 'port': 4802},
         # Cook Strait Fix: Cape Koamaru (Marlborough Sounds Tip) -> Nelson (4802)
         # Pushes Wellington (Red) back to North Island
         {'Site Code': 'GHOST_KOAMARU', 'geometry': Point(174.383, -41.116), 'port': 4802}
