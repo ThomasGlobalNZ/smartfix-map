@@ -1,4 +1,4 @@
-QA STATION STATUS REPORT (2026-02-11 03:54)
+QA STATION STATUS REPORT (2026-02-11 04:05)
 Source: SmartFix API
 ========================================
 
@@ -34,19 +34,20 @@ WHKT (Online)
 
 PORT 4807 (21 stations):
 2406 (Online), ARTA (Online), CORM (Online), GSCA (Online), GSHO (Offline)
-GSHT (Online), GSMA (Online), GSMO (Online), GSOK (Online), GSPP (Online)
+GSHT (Online), GSMA (Online), GSMO (Online), GSOK (Offline), GSPP (Online)
 GSPU (Offline), GSRO (Offline), GSTH (Online), GSTK (Online), GSTR (Online)
 GSTU (Online), GSWH (Online), GSWI (Online), HAMT (Online), RGUT (Online)
 TRNG (Online)
 
 PORT 4809 (22 stations):
-AUCK (Online), AUKT (Online), GSAA (Online), GSAY (Online), GSBD (Online)
+AUCK (Online), AUKT (Online), GSAA (Online), GSAY (Offline), GSBD (Online)
 GSCL (Online), GSDR (Online), GSGL (Online), GSHU (Online), GSKK (Online)
 GSMD (Online), GSMH (Online), GSPE (Online), GSPK (Online), GSPL (Online)
 GSPO (Offline), GSSB (Online), GSUT (Online), GSWR (Online), KTIA (Online)
 WARK (Online), WHNG (Online)
 
-OFFLINE STATIONS (9):
-AUTO (Last: 2026-02-10 12:03), GSHO (Last: 2026-02-10 12:03), GSLE (Last: 2026-02-10 12:03)
-GSPO (Last: 2026-02-10 12:03), GSPU (Last: 2026-02-10 12:03), GSRA (Last: 2026-02-10 12:03)
-GSRO (Last: 2026-02-10 12:03), PYGR (Last: 2026-02-10 12:03), VRSS (Last: 2026-02-10 12:03)
+OFFLINE STATIONS (11):
+AUTO (Last: 2026-02-10 12:03), GSAY (Last: 2026-02-11 03:54), GSHO (Last: 2026-02-10 12:03)
+GSLE (Last: 2026-02-10 12:03), GSOK (Last: 2026-02-11 03:54), GSPO (Last: 2026-02-10 12:03)
+GSPU (Last: 2026-02-10 12:03), GSRA (Last: 2026-02-10 12:03), GSRO (Last: 2026-02-10 12:03)
+PYGR (Last: 2026-02-10 12:03), VRSS (Last: 2026-02-10 12:03)
