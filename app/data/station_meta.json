@@ -209,12 +209,6 @@
         "port": 4801,
         "status": "Online"
     },
-    "GSGx": {
-        "last_seen": "Never",
-        "network_port": null,
-        "port": null,
-        "status": "Offline"
-    },
     "GSHO": {
         "last_seen": "2026-02-10 12:03",
         "network_port": null,

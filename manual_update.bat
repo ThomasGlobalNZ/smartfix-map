@@ -20,7 +20,7 @@ git add .
 
 echo.
 set /p commit_msg="Enter commit message (or press Enter for 'Manual Update'): "
-if "%commit_msg%"=="" set commit_msg="Manual Update"
+if "%commit_msg%"=="" set commit_msg=Manual Update
 
 echo.
 echo [3/4] Committing...
