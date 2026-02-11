@@ -670,19 +670,20 @@ if (!document.getElementById('ppm-btn')) {
 }
 
 function showPPMCalculator() {
-    let dist = prompt("Enter Baseline Distance (km):", "10");
-    if (dist === null) return;
-    dist = parseFloat(dist);
-    if (isNaN(dist)) {
-        alert("Invalid distance.");
-        return;
-    }
+    showInputModal("Baseline Error Calculator", "Enter Baseline Distance (km):", "10", (dist) => {
+        if (dist === null) return;
+        dist = parseFloat(dist);
+        if (isNaN(dist)) {
+            showAlertModal("Error", "Invalid distance.");
+            return;
+        }
 
-    // Assumptions: H = 8mm + 1ppm, V = 15mm + 1ppm
-    const hErr = 8 + (dist * 1); // 1ppm = 1mm/km
-    const vErr = 15 + (dist * 1);
+        // Assumptions: H = 8mm + 1ppm, V = 15mm + 1ppm
+        const hErr = 8 + (dist * 1); // 1ppm = 1mm/km
+        const vErr = 15 + (dist * 1);
 
-    alert(`Estimated Error for ${dist} km:\n\nHorizontal: ±${hErr.toFixed(1)} mm\nVertical: ±${vErr.toFixed(1)} mm\n\n(Based on 8mm+1ppm H, 15mm+1ppm V)`);
+        showAlertModal("Estimated Error", `Estimated Error for ${dist} km:<br><br>Horizontal: ±${hErr.toFixed(1)} mm<br>Vertical: ±${vErr.toFixed(1)} mm<br><br><span style="font-size: 0.9em; color: #666;">(Based on 8mm+1ppm H, 15mm+1ppm V)</span>`);
+    });
 }
 
 // --- Tools: Mobile Info Tool (Moved to End) ---
@@ -1046,36 +1047,37 @@ if (coverageBtn) {
         } else {
             resetTools('coverage'); // Clear others
 
-            let input = prompt("Enter coverage radius in km (comma separated for multiple):", "10");
-            if (input === null) {
-                resetTools(null); // Cancel
-                return;
-            }
+            showInputModal("Coverage Analysis", "Enter coverage radius in km (comma separated for multiple):", "10", (input) => {
+                if (input === null) {
+                    resetTools(null); // Cancel
+                    return;
+                }
 
-            let radii = input.split(',').map(s => parseFloat(s.trim())).filter(n => !isNaN(n) && n > 0);
-            if (radii.length === 0) {
-                alert("Invalid inputs");
-                resetTools(null);
-                return;
-            }
+                let radii = input.split(',').map(s => parseFloat(s.trim())).filter(n => !isNaN(n) && n > 0);
+                if (radii.length === 0) {
+                    showAlertModal("Error", "Invalid inputs");
+                    resetTools(null);
+                    return;
+                }
 
-            coverageRadius = radii;
-            isCoverageMode = true;
-            // Class active added by resetTools('coverage')? No, resetTools clears others.
-            coverageBtn.classList.add('active');
-            map.getContainer().style.cursor = 'crosshair';
+                coverageRadius = radii;
+                isCoverageMode = true;
+                // Class active added by resetTools('coverage')? No, resetTools clears others.
+                coverageBtn.classList.add('active');
+                map.getContainer().style.cursor = 'crosshair';
 
-            // Draw coverage rings around all stations
-            allStations.forEach(station => {
-                const lat = station.geometry.coordinates[1];
-                let lon = station.geometry.coordinates[0];
-                if (lon < -170) lon += 360; // CHTI fix
+                // Draw coverage rings around all stations
+                allStations.forEach(station => {
+                    const lat = station.geometry.coordinates[1];
+                    let lon = station.geometry.coordinates[0];
+                    if (lon < -170) lon += 360; // CHTI fix
 
-                const latlng = L.latLng(lat, lon);
-                drawCoverageRings(latlng);
+                    const latlng = L.latLng(lat, lon);
+                    drawCoverageRings(latlng);
+                });
+
+                showInstruction("Coverage: Click a station (or map point) to add more rings.");
             });
-
-            showInstruction("Coverage: Click a station (or map point) to add more rings.");
         }
     };
 }
@@ -1380,6 +1382,105 @@ function hideInstruction() {
         instructionBox.style.display = 'none';
     }
     document.removeEventListener('mousemove', updateInstructionPos);
+}
+
+// --- Custom Modules (Input / Alert) ---
+function showInputModal(title, message, defaultValue, callback) {
+    let modal = document.createElement('div');
+    modal.className = 'info-modal-backdrop';
+    modal.style.zIndex = 5000; // High z-index
+
+    modal.innerHTML = `
+        <div class="info-modal-content" style="text-align: left; max-width: 350px;">
+            <h4 style="margin-top: 0; color: #2196F3;">${title}</h4>
+            <p style="margin-bottom: 15px; font-size: 14px;">${message}</p>
+            <input type="text" id="modal-input" value="${defaultValue}" style="width: 100%; padding: 8px; box-sizing: border-box; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px;">
+            <div style="text-align: right; display: flex; justify-content: flex-end; gap: 10px;">
+                <button id="modal-cancel" style="padding: 6px 12px; background: #eee; border: 1px solid #ccc; border-radius: 4px; cursor: pointer;">Cancel</button>
+                <button id="modal-ok" style="padding: 6px 12px; background: #2196F3; color: white; border: none; border-radius: 4px; cursor: pointer;">OK</button>
+            </div>
+        </div>
+    `;
+
+    document.body.appendChild(modal);
+    modal.style.display = 'flex';
+
+    const inputEl = modal.querySelector('#modal-input');
+    const okBtn = modal.querySelector('#modal-ok');
+    const cancelBtn = modal.querySelector('#modal-cancel');
+
+    inputEl.focus();
+    inputEl.select();
+
+    const cleanup = () => {
+        document.body.removeChild(modal);
+    };
+
+    okBtn.onclick = () => {
+        const val = inputEl.value;
+        cleanup();
+        if (callback) callback(val);
+    };
+
+    cancelBtn.onclick = () => {
+        cleanup();
+        if (callback) callback(null);
+    };
+
+    // Enter key support
+    inputEl.onkeydown = (e) => {
+        if (e.key === 'Enter') {
+            okBtn.click();
+        }
+        if (e.key === 'Escape') {
+            cancelBtn.click();
+        }
+    };
+
+    // Click outside to cancel
+    modal.onclick = (e) => {
+        if (e.target === modal) cancelBtn.click();
+    };
+}
+
+function showAlertModal(title, message) {
+    let modal = document.createElement('div');
+    modal.className = 'info-modal-backdrop';
+    modal.style.zIndex = 5000;
+
+    modal.innerHTML = `
+        <div class="info-modal-content" style="text-align: center; max-width: 300px;">
+            <h4 style="margin-top: 0; color: #333;">${title}</h4>
+            <div style="margin-bottom: 20px; font-size: 14px; text-align: left; line-height: 1.5;">${message}</div>
+            <button id="modal-ok" style="padding: 6px 16px; background: #2196F3; color: white; border: none; border-radius: 4px; cursor: pointer;">OK</button>
+        </div>
+    `;
+
+    document.body.appendChild(modal);
+    modal.style.display = 'flex';
+
+    const okBtn = modal.querySelector('#modal-ok');
+
+    const cleanup = () => {
+        document.body.removeChild(modal);
+    };
+
+    okBtn.onclick = () => {
+        cleanup();
+    };
+
+    // Enter/Esc key support
+    const keyHandler = (e) => {
+        if (e.key === 'Enter' || e.key === 'Escape') {
+            document.removeEventListener('keydown', keyHandler);
+            okBtn.click();
+        }
+    };
+    document.addEventListener('keydown', keyHandler);
+
+    modal.onclick = (e) => {
+        if (e.target === modal) okBtn.click();
+    };
 }
 
 function updateInstructionPos(e) {
