@@ -1,4 +1,4 @@
-QA STATION STATUS REPORT (2026-02-11 19:39)
+QA STATION STATUS REPORT (2026-02-11 21:52)
 Source: SmartFix API
 ========================================
 
@@ -42,11 +42,11 @@ TRNG (Online)
 PORT 4809 (22 stations):
 AUCK (Online), AUKT (Online), GSAA (Online), GSAY (Online), GSBD (Online)
 GSCL (Online), GSDR (Online), GSGL (Online), GSHU (Online), GSKK (Online)
-GSMD (Online), GSMH (Offline), GSPE (Online), GSPK (Online), GSPL (Online)
+GSMD (Online), GSMH (Online), GSPE (Online), GSPK (Online), GSPL (Online)
 GSPO (Offline), GSSB (Online), GSUT (Online), GSWR (Online), KTIA (Online)
 WARK (Online), WHNG (Online)
 
-OFFLINE STATIONS (9):
+OFFLINE STATIONS (8):
 AUTO (Last: 2026-02-10 12:03), GSHO (Last: 2026-02-10 12:03), GSLE (Last: 2026-02-10 12:03)
-GSMH (Last: 2026-02-11 15:17), GSPO (Last: 2026-02-10 12:03), GSRA (Last: 2026-02-10 12:03)
-GSRO (Last: 2026-02-10 12:03), PYGR (Last: 2026-02-10 12:03), VRSS (Last: 2026-02-10 12:03)
+GSPO (Last: 2026-02-10 12:03), GSRA (Last: 2026-02-10 12:03), GSRO (Last: 2026-02-10 12:03)
+PYGR (Last: 2026-02-10 12:03), VRSS (Last: 2026-02-10 12:03)
