@@ -715,7 +715,7 @@ function showMobileInfo() {
                 
                 <div style="font-size: 13px; text-align: left; line-height: 1.6;">
                     <p style="margin-bottom: 15px;">
-                        This map provides a visual reference for the SmartFix Real-time Network stations and coverage areas. 
+                        This map provides a visual reference for the SmartFix RTK Network stations and coverage areas. 
                         Please note that this tool is not always updated regularly and should not be relied upon for critical 
                         decision-making. For the most accurate and up-to-date information, always verify details with 
                         <b>Global Survey</b>.
