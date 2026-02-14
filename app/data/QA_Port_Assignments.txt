@@ -1,4 +1,4 @@
-QA STATION STATUS REPORT (2026-02-14 22:55)
+QA STATION STATUS REPORT (2026-02-14 23:52)
 Source: SmartFix API
 ========================================
 
@@ -18,7 +18,7 @@ TKHL (Online), WEST (Online), WRAU (Online)
 PORT 4803 (16 stations):
 CHTI (Online), GSAB (Online), GSAM (Online), GSBF (Online), GSBR (Online)
 GSCC (Online), GSDA (Online), GSKA (Online), GSLE (Offline), GSLI (Online)
-GSOX (Online), GSRL (Online), GSTI (Online), LY2T (Online), MQZG (Online)
+GSOX (Online), GSRL (Online), GSTI (Online), LY2T (Online), MQZG (Offline)
 YALD (Online)
 
 PORT 4804 (13 stations):
@@ -46,7 +46,7 @@ GSMD (Online), GSMH (Online), GSPE (Online), GSPK (Online), GSPL (Online)
 GSPO (Offline), GSSB (Online), GSUT (Online), GSWR (Online), KTIA (Online)
 WARK (Online), WHNG (Online)
 
-OFFLINE STATIONS (8):
+OFFLINE STATIONS (9):
 AUTO (Last: 2026-02-10 12:03), GSLE (Last: 2026-02-10 12:03), GSPO (Last: 2026-02-10 12:03)
-GSRA (Last: 2026-02-10 12:03), GSRO (Last: 2026-02-10 12:03), PYGR (Last: 2026-02-10 12:03)
-VGMT (Last: 2026-02-12 23:01), VRSS (Last: 2026-02-10 12:03)
+GSRA (Last: 2026-02-10 12:03), GSRO (Last: 2026-02-10 12:03), MQZG (Last: 2026-02-14 22:55)
+PYGR (Last: 2026-02-10 12:03), VGMT (Last: 2026-02-12 23:01), VRSS (Last: 2026-02-10 12:03)
