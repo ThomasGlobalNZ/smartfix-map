@@ -1,4 +1,4 @@
-QA STATION STATUS REPORT (2026-02-14 11:47)
+QA STATION STATUS REPORT (2026-02-14 13:56)
 Source: SmartFix API
 ========================================
 
@@ -6,7 +6,7 @@ PORT 4801 (23 stations):
 BLUF (Online), DUND (Online), DUNT (Online), GSBA (Online), GSCM (Online)
 GSGR (Online), GSIN (Online), GSLW (Online), GSLX (Online), GSM2 (Online)
 GSOM (Online), GSQT (Online), GSQU (Online), GSRA (Offline), GSTA (Online)
-GSTW (Online), HAAS (Online), LEXA (Online), MAVL (Online), MTJO (Online)
+GSTW (Online), HAAS (Online), LEXA (Offline), MAVL (Online), MTJO (Online)
 OUSD (Online), PYGR (Offline), WAIM (Online)
 
 PORT 4802 (18 stations):
@@ -46,7 +46,7 @@ GSMD (Online), GSMH (Online), GSPE (Online), GSPK (Online), GSPL (Online)
 GSPO (Offline), GSSB (Online), GSUT (Online), GSWR (Online), KTIA (Online)
 WARK (Online), WHNG (Online)
 
-OFFLINE STATIONS (8):
+OFFLINE STATIONS (9):
 AUTO (Last: 2026-02-10 12:03), GSLE (Last: 2026-02-10 12:03), GSPO (Last: 2026-02-10 12:03)
-GSRA (Last: 2026-02-10 12:03), GSRO (Last: 2026-02-10 12:03), PYGR (Last: 2026-02-10 12:03)
-VGMT (Last: 2026-02-12 23:01), VRSS (Last: 2026-02-10 12:03)
+GSRA (Last: 2026-02-10 12:03), GSRO (Last: 2026-02-10 12:03), LEXA (Last: 2026-02-14 11:47)
+PYGR (Last: 2026-02-10 12:03), VGMT (Last: 2026-02-12 23:01), VRSS (Last: 2026-02-10 12:03)
