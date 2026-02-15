@@ -1,4 +1,4 @@
-QA STATION STATUS REPORT (2026-02-15 17:01)
+QA STATION STATUS REPORT (2026-02-15 19:15)
 Source: SmartFix API
 ========================================
 
@@ -10,7 +10,7 @@ GSTW (Online), HAAS (Online), LEXA (Online), MAVL (Online), MTJO (Online)
 OUSD (Online), PYGR (Offline), WAIM (Online)
 
 PORT 4802 (18 stations):
-CLRR (Online), CMBL (Online), GLDB (Online), GSBN (Online), GSCT (Online)
+CLRR (Offline), CMBL (Online), GLDB (Online), GSBN (Online), GSCT (Online)
 GSNE (Online), GSPC (Online), HANM (Online), HOKI (Online), KAIK (Online)
 LKTA (Online), METH (Online), MRBL (Online), NLSN (Online), NSFT (Online)
 TKHL (Online), WEST (Online), WRAU (Online)
@@ -46,7 +46,7 @@ GSMD (Online), GSMH (Online), GSPE (Online), GSPK (Online), GSPL (Online)
 GSPO (Offline), GSSB (Online), GSUT (Online), GSWR (Online), KTIA (Online)
 WARK (Online), WHNG (Online)
 
-OFFLINE STATIONS (8):
-AUTO (Last: 2026-02-10 12:03), GSLE (Last: 2026-02-10 12:03), GSPO (Last: 2026-02-10 12:03)
-GSRA (Last: 2026-02-10 12:03), GSRO (Last: 2026-02-10 12:03), PYGR (Last: 2026-02-10 12:03)
-VGMT (Last: 2026-02-12 23:01), VRSS (Last: 2026-02-10 12:03)
+OFFLINE STATIONS (9):
+AUTO (Last: 2026-02-10 12:03), CLRR (Last: 2026-02-15 17:01), GSLE (Last: 2026-02-10 12:03)
+GSPO (Last: 2026-02-10 12:03), GSRA (Last: 2026-02-10 12:03), GSRO (Last: 2026-02-10 12:03)
+PYGR (Last: 2026-02-10 12:03), VGMT (Last: 2026-02-12 23:01), VRSS (Last: 2026-02-10 12:03)
