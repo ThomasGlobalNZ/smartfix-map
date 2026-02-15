@@ -285,7 +285,27 @@ const stationLocations = {
     'GSHU': 'Huapai',
     'GSAY': 'Albany',
     'GSPL': 'Penlink',
-    'GSMD': 'Wainui'
+    'GSMD': 'Wainui',
+    'GSWF': 'Wellsford',
+    'GSKK': 'Kerikeri',
+    'GSWR': 'Whangarei',
+    'GSDR': 'Dargaville',
+    'RGUT': 'Rotorua',
+    'RGAR': 'Reporoa',
+    'ARTA': 'Arataki',
+    '2406': 'Mokai',
+    'LEVN': 'Levin',
+    'PAEK': 'Paekakariki',
+    'TKHL': 'Takaka Hill',
+    'AVLN': 'Avalon',
+    'TRWH': 'Terawhiti',
+    'BTHL': 'South Wairarapa',
+    'WRAU': 'Wairau Valley',
+    'CMBL': 'Cape Campbell',
+    'CLRR': 'Clarence',
+    'HANM': 'Hanmer Springs',
+    'MRBL': 'Marble Point',
+    'YALD': 'Yaldhurst'
 };
 
 Promise.all([
@@ -451,28 +471,19 @@ Promise.all([
                     `;
                     marker.bindPopup(popupContent);
 
-                    // Persistent Label - zoom responsive
+                    // Dynamic Labeling Logic
+                    // Initial State: Map Zoom < 11 (assume logic below). Tooltip = Code, Hover Only.
                     marker.bindTooltip(code, {
-                        permanent: true,
+                        permanent: false, // Initial: Hover Only
                         direction: 'auto',
                         className: isOffline ? 'station-label offline' : 'station-label'
                     });
 
-                    // Update label size based on zoom
-                    map.on('zoomend', function () {
-                        const zoom = map.getZoom();
-                        let fontSize = '11px'; // Default
-                        if (zoom >= 8) fontSize = '13px';
-                        if (zoom >= 10) fontSize = '15px';
+                    // Add property to marker for easier update
+                    marker.stationCode = code;
+                    marker.locationName = locationName;
+                    marker.isOffline = isOffline;
 
-                        const tooltip = marker.getTooltip();
-                        if (tooltip) {
-                            const tooltipEl = tooltip.getElement();
-                            if (tooltipEl) tooltipEl.style.fontSize = fontSize;
-                        }
-                    });
-
-                    // FIX: Close Region/Circuit Pin when clicking a station
                     // FIX: Close Region/Circuit Pin when clicking a station
                     marker.on('click', (e) => {
                         // Coverage Tool Logic for Stations
@@ -484,12 +495,6 @@ Promise.all([
 
                         // Measure Tool Logic for Stations (Snap to station?)
                         if (isMeasuring) {
-                            // Let it propagate to map to add point? 
-                            // Or handle snap here. User didn't ask for snap, just "distance toggled off".
-                            // "Distance toggled off" was caused by Region Click calling clearMeasure().
-                            // If we propagate, Map Click handles it. 
-                            // But Markers catch clicks. 
-                            // Hand it off manually:
                             L.DomEvent.stopPropagation(e);
                             map.fire('click', { latlng: e.latlng });
                             return;
@@ -509,8 +514,48 @@ Promise.all([
 
         process(smartfixData, 'SmartFix');
         process(linzData, 'LINZ');
+
+        // Trigger initial zoom check
+        updateStationLabels();
     })
     .catch(err => console.error('Error loading data:', err));
+
+// Global Zoom Listener for Labels
+map.on('zoomend', function () {
+    updateStationLabels();
+});
+
+function updateStationLabels() {
+    const zoom = map.getZoom();
+    const showNames = zoom >= 10; // Threshold for Names vs Codes
+
+    stationLayer.eachLayer(function (marker) {
+        if (!marker.stationCode) return;
+
+        const isOffline = marker.isOffline;
+        const className = isOffline ? 'station-label offline' : 'station-label';
+
+        // Unbind existing to cleanly switch mode
+        marker.unbindTooltip();
+
+        if (showNames) {
+            // High Zoom: Permanent Name
+            marker.bindTooltip(marker.locationName, {
+                permanent: true,
+                direction: 'top', // Above marker to avoid covering it
+                offset: [0, -5],
+                className: className
+            });
+        } else {
+            // Low Zoom: Hover Code
+            marker.bindTooltip(marker.stationCode, {
+                permanent: false,
+                direction: 'auto',
+                className: className
+            });
+        }
+    });
+}
 
 // Load Meridional Circuits
 fetch('./data/Meridional_Circuits.geojson')
@@ -716,15 +761,12 @@ function showMobileInfo() {
                 <div style="font-size: 13px; text-align: left; line-height: 1.6;">
                     <p style="margin-bottom: 15px;">
                         This map provides a visual reference for the SmartFix RTK Network stations and coverage areas. 
-                        Please note that this tool is not always updated regularly and should not be relied upon for critical 
-                        decision-making. For the most accurate and up-to-date information, always verify details with 
-                        <b>Global Survey</b>.
+                        For the most accurate and up-to-date information, always verify details with 
+                        <b>Global Survey</b> or check the <a href="https://knowledgebase.globalsurvey.co.nz/smartfix" target="_blank" style="color: blue;">Knowledge Base</a>.
                     </p>
                     
                     <h4 style="margin: 15px 0 10px 0; color: #2196F3; font-size: 16px;">Connection Details</h4>
-                    <p><b>Host:</b> <span style="color: blue">www.smartfix.co.nz</span></p>
-                    <p><b>Single Site:</b> Connect to single site by using <b><u>CODE</u>singleADV4</b> on either of ports shown in regions. See station popup for mountpoint.</p>
-                    <p><b>Network Site:</b> Connect to network solution by <b><u>CODE</u>fixedADV4</b> on either of ports shown in regions above. See the station for individual mountpoints.</p>
+                    <p><b>Host:</b> <span style="color: blue">www.smartfix.co.nz</span> (60.234.42.123)</p>
                     <p><b>Nearest Site:</b> Connect to <b>Port 4815</b> with mountpoint <b>NearestSiteADV4</b>.</p>
                     
                     <h4 style="margin: 15px 0 10px 0; color: #2196F3; font-size: 16px;">Copyright & Attribution</h4>
